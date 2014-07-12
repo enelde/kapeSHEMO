@@ -2,27 +2,26 @@
     ViewBag.Title = "Selamat Datang";
 }
 
-@*Styles.Render("~/Content/styleForSlideShowImage");*@
 
-
-<div class="row-image" style="background-color: white">
+<div class="row-image">           
+    @*<img src="../Content/image/surabaya.jpg" style="width:100%"/>*@
     <ul class="cb-slideshow">
-        <li><span>Image 01</span></li>
-        <li><span>Image 02</span></li>
-    </ul>
+        <li><span></span></li>
+        <li><span></span></li>
+    </ul>                   
 </div>
 
-<div class="row-page">
-    <div class="container body-content" style="padding-top:30px">
-        <div class="mediabox">
-            <img src="..\Content\image\01.jpg" />
-            <h3><strong>Portal Surabaya</strong></h3>
-            <p>@ViewBag.t</p>
-        </div>
-    </div>
-</div>
-
+<div class="mediabox" style="background-color: gray; border: 1px solid #dddddd;">
+    <img src="..\Content\image\01.jpg" />
+    <h3><strong>Portal Surabaya</strong></h3>
+    <p>@ViewBag.t</p>
+</div>  
+          
 <div class="row-page" style="background-color:#ffffff">
+    dasdasdsaddsa
+</div>
+
+@*<div class="row-page" style="background-color:#ffffff">
     <h2 style="color:blue;text-align:center; margin-top:0; padding-top:20px;">Portal Surabaya</h2>
     <div class="container">
        
@@ -30,7 +29,7 @@
                         <tr>
                             <td>
                                 <button type="button" class="popovertop btn btn-lg btn-danger bs-docs-popover-dismiss" data-toggle="popover" title="" data-content="deskripsi top wisata 1" data-original-title="Title Top Wisata 1">Title Top Wisata 1</button>
-                                @*<button type="button" class="btn btn-lg btn-danger bs-docs-popover-dismiss" data-toggle="popover" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="Dismissible popover">Dismissible popover</button>*@
+                                <button type="button" class="btn btn-lg btn-danger bs-docs-popover-dismiss" data-toggle="popover" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="Dismissible popover">Dismissible popover</button>
                             </td>
                         </tr>
                         <tr>
@@ -61,15 +60,15 @@
                     </table>
                 
     </div>
-</div>
+</div>*@
 <div class="row-page">
     http://tympanus.net/Development/GammaGallery/
 </div>
 
-<script>
+@*<script>
         $(document).ready(function () {
             $('.popovertop').popover({
                 trigger: ' hover'
             });
         });
-    </script>
+    </script>*@
