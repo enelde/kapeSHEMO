@@ -1,0 +1,716 @@
+/*==============================================================*/
+/* DBMS name:      Sybase SQL Anywhere 12                       */
+/* Created on:     7/13/2014 12:23:05 PM                        */
+/*==============================================================*/
+
+
+if exists(select 1 from sys.sysforeignkey where role='FK_GAMBAR_E_GAMBAR____MONTH_EV') then
+    alter table GAMBAR_EVENT
+       delete foreign key FK_GAMBAR_E_GAMBAR____MONTH_EV
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role='FK_GAMBAR_H_GAMBAR____HOTEL') then
+    alter table GAMBAR_HOTEL
+       delete foreign key FK_GAMBAR_H_GAMBAR____HOTEL
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role='FK_GAMBAR_R_GAMBAR____RUMAH_MA') then
+    alter table GAMBAR_RUMAH_MAKAN
+       delete foreign key FK_GAMBAR_R_GAMBAR____RUMAH_MA
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role='FK_GAMBAR_T_GAMBAR____WISATA') then
+    alter table GAMBAR_TEMPAT_WISATA
+       delete foreign key FK_GAMBAR_T_GAMBAR____WISATA
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role='FK_GAMBAR_T_GAMBAR____TRANSPOR') then
+    alter table GAMBAR_TRANSPORTASI
+       delete foreign key FK_GAMBAR_T_GAMBAR____TRANSPOR
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role='FK_RM___MAK_RM___MAKA_RUMAH_MA') then
+    alter table RM___MAKANAN
+       delete foreign key FK_RM___MAK_RM___MAKA_RUMAH_MA
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role='FK_RM___MAK_RM___MAKA_MAKANAN') then
+    alter table RM___MAKANAN
+       delete foreign key FK_RM___MAK_RM___MAKA_MAKANAN
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role='FK_RM___MIN_RM___MINU_RUMAH_MA') then
+    alter table RM___MINUMAN
+       delete foreign key FK_RM___MIN_RM___MINU_RUMAH_MA
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role='FK_RM___MIN_RM___MINU_MINUMAN') then
+    alter table RM___MINUMAN
+       delete foreign key FK_RM___MIN_RM___MINU_MINUMAN
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role='FK_RUMAH_MA_KATEGORI__KATEGORI') then
+    alter table RUMAH_MAKAN
+       delete foreign key FK_RUMAH_MA_KATEGORI__KATEGORI
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role='FK_TOP_WISA_WISATA_HO_WISATA') then
+    alter table TOP_WISATA
+       delete foreign key FK_TOP_WISA_WISATA_HO_WISATA
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role='FK_TRANSPOR_KATEGORI__KATEGORI') then
+    alter table TRANSPORTASI
+       delete foreign key FK_TRANSPOR_KATEGORI__KATEGORI
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role='FK_WISATA_KATEGORI__KATEGORI') then
+    alter table WISATA
+       delete foreign key FK_WISATA_KATEGORI__KATEGORI
+end if;
+
+if exists(select 1 from sys.sysforeignkey where role='FK_WISATA_WISATA_HO_TOP_WISA') then
+    alter table WISATA
+       delete foreign key FK_WISATA_WISATA_HO_TOP_WISA
+end if;
+
+drop index if exists GAMBAR_EVENT.GAMBAR___EVENT_FK;
+
+drop index if exists GAMBAR_EVENT.GAMBAR_EVENT_PK;
+
+drop table if exists GAMBAR_EVENT;
+
+drop index if exists GAMBAR_HOTEL.GAMBAR___HOTEL_FK;
+
+drop index if exists GAMBAR_HOTEL.GAMBAR_HOTEL_PK;
+
+drop table if exists GAMBAR_HOTEL;
+
+drop index if exists GAMBAR_RUMAH_MAKAN.GAMBAR___RUMAH_MAKAN_FK;
+
+drop index if exists GAMBAR_RUMAH_MAKAN.GAMBAR_RUMAH_MAKAN_PK;
+
+drop table if exists GAMBAR_RUMAH_MAKAN;
+
+drop index if exists GAMBAR_TEMPAT_WISATA.GAMBAR___TEMPAT_WISATA_FK;
+
+drop index if exists GAMBAR_TEMPAT_WISATA.GAMBAR_TEMPAT_WISATA_PK;
+
+drop table if exists GAMBAR_TEMPAT_WISATA;
+
+drop index if exists GAMBAR_TRANSPORTASI.GAMBAR___TRANSPORTASI_FK;
+
+drop index if exists GAMBAR_TRANSPORTASI.GAMBAR_TRANSPORTASI_PK;
+
+drop table if exists GAMBAR_TRANSPORTASI;
+
+drop index if exists HOTEL.HOTEL_PK;
+
+drop table if exists HOTEL;
+
+drop index if exists KATEGORI_RUMAH_MAKAN.KATEGORI_RUMAH_MAKAN_PK;
+
+drop table if exists KATEGORI_RUMAH_MAKAN;
+
+drop index if exists KATEGORI_TRANSPORTASI.KATEGORI_TRANSPORTASI_PK;
+
+drop table if exists KATEGORI_TRANSPORTASI;
+
+drop index if exists KATEGORI_WISATA.KATEGORI_WISATA_PK;
+
+drop table if exists KATEGORI_WISATA;
+
+drop index if exists MAKANAN.MAKANAN_PK;
+
+drop table if exists MAKANAN;
+
+drop index if exists MINUMAN.MINUMAN_PK;
+
+drop table if exists MINUMAN;
+
+drop index if exists MONTH_EVENT.MONTH_EVENT_PK;
+
+drop table if exists MONTH_EVENT;
+
+drop index if exists RM___MAKANAN.RM___MAKANAN2_FK;
+
+drop index if exists RM___MAKANAN.RM___MAKANAN_FK;
+
+drop index if exists RM___MAKANAN.RM___MAKANAN_PK;
+
+drop table if exists RM___MAKANAN;
+
+drop index if exists RM___MINUMAN.RM___MINUMAN2_FK;
+
+drop index if exists RM___MINUMAN.RM___MINUMAN_FK;
+
+drop index if exists RM___MINUMAN.RM___MINUMAN_PK;
+
+drop table if exists RM___MINUMAN;
+
+drop index if exists RUMAH_MAKAN.KATEGORI_RM___RM_FK;
+
+drop index if exists RUMAH_MAKAN.RUMAH_MAKAN_PK;
+
+drop table if exists RUMAH_MAKAN;
+
+drop index if exists TOP_WISATA.WISATA_HOMEPAGE2_FK;
+
+drop index if exists TOP_WISATA.TOP_WISATA_PK;
+
+drop table if exists TOP_WISATA;
+
+drop index if exists TRANSPORTASI.KATEGORI_TRANSPORTASI_FK;
+
+drop index if exists TRANSPORTASI.TRANSPORTASI_PK;
+
+drop table if exists TRANSPORTASI;
+
+drop index if exists WISATA.WISATA_HOMEPAGE_FK;
+
+drop index if exists WISATA.KATEGORI___WISATA_FK;
+
+drop index if exists WISATA.WISATA_PK;
+
+drop table if exists WISATA;
+
+/*==============================================================*/
+/* Table: GAMBAR_EVENT                                          */
+/*==============================================================*/
+create table GAMBAR_EVENT 
+(
+   ID_GAMBAR_EVENT      integer                        not null,
+   ID_MONTH_EVENT       integer                        not null,
+   NAMA_GAMBAR_EVENT    varchar(20)                    null,
+   GAMBAR_EVENT         long binary                    null,
+   constraint PK_GAMBAR_EVENT primary key (ID_GAMBAR_EVENT)
+);
+
+/*==============================================================*/
+/* Index: GAMBAR_EVENT_PK                                       */
+/*==============================================================*/
+create unique index GAMBAR_EVENT_PK on GAMBAR_EVENT (
+ID_GAMBAR_EVENT ASC
+);
+
+/*==============================================================*/
+/* Index: GAMBAR___EVENT_FK                                     */
+/*==============================================================*/
+create index GAMBAR___EVENT_FK on GAMBAR_EVENT (
+ID_MONTH_EVENT ASC
+);
+
+/*==============================================================*/
+/* Table: GAMBAR_HOTEL                                          */
+/*==============================================================*/
+create table GAMBAR_HOTEL 
+(
+   ID_GAMBAR_HOTEL      integer                        not null,
+   ID_HOTEL             integer                        null,
+   NAMA_GAMBAR_HOTEL    varchar(20)                    null,
+   KETERANGAN_GAMBAR_HOTEL varchar(100)                   null,
+   GAMBAR_HOTEL         long binary                    null,
+   constraint PK_GAMBAR_HOTEL primary key (ID_GAMBAR_HOTEL)
+);
+
+/*==============================================================*/
+/* Index: GAMBAR_HOTEL_PK                                       */
+/*==============================================================*/
+create unique index GAMBAR_HOTEL_PK on GAMBAR_HOTEL (
+ID_GAMBAR_HOTEL ASC
+);
+
+/*==============================================================*/
+/* Index: GAMBAR___HOTEL_FK                                     */
+/*==============================================================*/
+create index GAMBAR___HOTEL_FK on GAMBAR_HOTEL (
+ID_HOTEL ASC
+);
+
+/*==============================================================*/
+/* Table: GAMBAR_RUMAH_MAKAN                                    */
+/*==============================================================*/
+create table GAMBAR_RUMAH_MAKAN 
+(
+   ID_GAMBAR_RUMAH_MAKAN integer                        not null,
+   ID_RUMAH_MAKAN       integer                        null,
+   NAMA_GAMBAR_RUMAH_MAKAN varchar(20)                    null,
+   KETERANGAN_GAMBAR_RUMAH_MAKAN varchar(100)                   null,
+   GAMBAR_RUMAH_MAKAN   long binary                    null,
+   constraint PK_GAMBAR_RUMAH_MAKAN primary key (ID_GAMBAR_RUMAH_MAKAN)
+);
+
+/*==============================================================*/
+/* Index: GAMBAR_RUMAH_MAKAN_PK                                 */
+/*==============================================================*/
+create unique index GAMBAR_RUMAH_MAKAN_PK on GAMBAR_RUMAH_MAKAN (
+ID_GAMBAR_RUMAH_MAKAN ASC
+);
+
+/*==============================================================*/
+/* Index: GAMBAR___RUMAH_MAKAN_FK                               */
+/*==============================================================*/
+create index GAMBAR___RUMAH_MAKAN_FK on GAMBAR_RUMAH_MAKAN (
+ID_RUMAH_MAKAN ASC
+);
+
+/*==============================================================*/
+/* Table: GAMBAR_TEMPAT_WISATA                                  */
+/*==============================================================*/
+create table GAMBAR_TEMPAT_WISATA 
+(
+   ID_GAMBAR_WISATA     integer                        not null,
+   ID_WISATA            integer                        not null,
+   NAMA_GAMBAR_WISATA   varchar(20)                    null,
+   KETERANGAN_GAMBAR_WISATA varchar(100)                   null,
+   GAMBAR_WISATA        long binary                    null,
+   constraint PK_GAMBAR_TEMPAT_WISATA primary key (ID_GAMBAR_WISATA)
+);
+
+/*==============================================================*/
+/* Index: GAMBAR_TEMPAT_WISATA_PK                               */
+/*==============================================================*/
+create unique index GAMBAR_TEMPAT_WISATA_PK on GAMBAR_TEMPAT_WISATA (
+ID_GAMBAR_WISATA ASC
+);
+
+/*==============================================================*/
+/* Index: GAMBAR___TEMPAT_WISATA_FK                             */
+/*==============================================================*/
+create index GAMBAR___TEMPAT_WISATA_FK on GAMBAR_TEMPAT_WISATA (
+ID_WISATA ASC
+);
+
+/*==============================================================*/
+/* Table: GAMBAR_TRANSPORTASI                                   */
+/*==============================================================*/
+create table GAMBAR_TRANSPORTASI 
+(
+   ID_GAMBAR_TRANSPORTASI integer                        not null,
+   ID_TRANSPORTASI      integer                        not null,
+   NAMA_GAMBAR_TRANSPORTASI varchar(20)                    null,
+   KETERANGAN_GAMBAR_TRANSPORTASI varchar(100)                   null,
+   GAMBAR_TRANSPORTASI  long binary                    null,
+   constraint PK_GAMBAR_TRANSPORTASI primary key (ID_GAMBAR_TRANSPORTASI)
+);
+
+/*==============================================================*/
+/* Index: GAMBAR_TRANSPORTASI_PK                                */
+/*==============================================================*/
+create unique index GAMBAR_TRANSPORTASI_PK on GAMBAR_TRANSPORTASI (
+ID_GAMBAR_TRANSPORTASI ASC
+);
+
+/*==============================================================*/
+/* Index: GAMBAR___TRANSPORTASI_FK                              */
+/*==============================================================*/
+create index GAMBAR___TRANSPORTASI_FK on GAMBAR_TRANSPORTASI (
+ID_TRANSPORTASI ASC
+);
+
+/*==============================================================*/
+/* Table: HOTEL                                                 */
+/*==============================================================*/
+create table HOTEL 
+(
+   ID_HOTEL             integer                        not null,
+   NAMA_HOTEL           varchar(100)                   null,
+   ALAMAT_HOTEL         varchar(100)                   null,
+   TELEPON_HOTEL        varchar(15)                    null,
+   BINTANG              float                          null,
+   WEBSITE              varchar(100)                   null,
+   constraint PK_HOTEL primary key (ID_HOTEL)
+);
+
+/*==============================================================*/
+/* Index: HOTEL_PK                                              */
+/*==============================================================*/
+create unique index HOTEL_PK on HOTEL (
+ID_HOTEL ASC
+);
+
+/*==============================================================*/
+/* Table: KATEGORI_RUMAH_MAKAN                                  */
+/*==============================================================*/
+create table KATEGORI_RUMAH_MAKAN 
+(
+   ID_KATEGORI_RUMAH_MAKAN integer                        not null,
+   KATEGORI_RUMAH_MAKAN varchar(50)                    null,
+   DESKRIPSI_KATEGORI_RUMAH_MAKAN varchar(4096)                  null,
+   constraint PK_KATEGORI_RUMAH_MAKAN primary key (ID_KATEGORI_RUMAH_MAKAN)
+);
+
+/*==============================================================*/
+/* Index: KATEGORI_RUMAH_MAKAN_PK                               */
+/*==============================================================*/
+create unique index KATEGORI_RUMAH_MAKAN_PK on KATEGORI_RUMAH_MAKAN (
+ID_KATEGORI_RUMAH_MAKAN ASC
+);
+
+/*==============================================================*/
+/* Table: KATEGORI_TRANSPORTASI                                 */
+/*==============================================================*/
+create table KATEGORI_TRANSPORTASI 
+(
+   ID_KATEGORI_TRANSPORTASI integer                        not null,
+   NAMA_KATEGORI_TRANSPORTASI varchar(100)                   null,
+   constraint PK_KATEGORI_TRANSPORTASI primary key (ID_KATEGORI_TRANSPORTASI)
+);
+
+/*==============================================================*/
+/* Index: KATEGORI_TRANSPORTASI_PK                              */
+/*==============================================================*/
+create unique index KATEGORI_TRANSPORTASI_PK on KATEGORI_TRANSPORTASI (
+ID_KATEGORI_TRANSPORTASI ASC
+);
+
+/*==============================================================*/
+/* Table: KATEGORI_WISATA                                       */
+/*==============================================================*/
+create table KATEGORI_WISATA 
+(
+   ID_KATEGORI_WISATA   integer                        not null,
+   KATEGORI_WISATA      varchar(30)                    null,
+   DESKRIPSI_KATEGORI   varchar(4096)                  null,
+   constraint PK_KATEGORI_WISATA primary key (ID_KATEGORI_WISATA)
+);
+
+/*==============================================================*/
+/* Index: KATEGORI_WISATA_PK                                    */
+/*==============================================================*/
+create unique index KATEGORI_WISATA_PK on KATEGORI_WISATA (
+ID_KATEGORI_WISATA ASC
+);
+
+/*==============================================================*/
+/* Table: MAKANAN                                               */
+/*==============================================================*/
+create table MAKANAN 
+(
+   ID_MAKANAN           integer                        not null,
+   NAMA_MAKANAN         varchar(100)                   null,
+   HARGA_NORMAL_MAKANAN numeric(8,2)                   null,
+   constraint PK_MAKANAN primary key (ID_MAKANAN)
+);
+
+/*==============================================================*/
+/* Index: MAKANAN_PK                                            */
+/*==============================================================*/
+create unique index MAKANAN_PK on MAKANAN (
+ID_MAKANAN ASC
+);
+
+/*==============================================================*/
+/* Table: MINUMAN                                               */
+/*==============================================================*/
+create table MINUMAN 
+(
+   ID_MINUMAN           integer                        not null,
+   MINUMAN              varchar(100)                   null,
+   HARGA_NORMAL_MINUMAN numeric(8,2)                   null,
+   constraint PK_MINUMAN primary key (ID_MINUMAN)
+);
+
+/*==============================================================*/
+/* Index: MINUMAN_PK                                            */
+/*==============================================================*/
+create unique index MINUMAN_PK on MINUMAN (
+ID_MINUMAN ASC
+);
+
+/*==============================================================*/
+/* Table: MONTH_EVENT                                           */
+/*==============================================================*/
+create table MONTH_EVENT 
+(
+   ID_MONTH_EVENT       integer                        not null,
+   NAMA_EVENT           varchar(100)                   null,
+   TELEPON_EVENT        varchar(15)                    null,
+   TANGGAL_MULAI        timestamp                      null,
+   TANGGAL_BERAKHIR     timestamp                      null,
+   LOKASI_EVENT         varchar(200)                   null,
+   LATITUDE_EVENT       varchar(30)                    null,
+   LONGITUDE_EVENT      varchar(30)                    null,
+   DESKRIPSI_EVENT      varchar(4096)                  null,
+   constraint PK_MONTH_EVENT primary key (ID_MONTH_EVENT)
+);
+
+/*==============================================================*/
+/* Index: MONTH_EVENT_PK                                        */
+/*==============================================================*/
+create unique index MONTH_EVENT_PK on MONTH_EVENT (
+ID_MONTH_EVENT ASC
+);
+
+/*==============================================================*/
+/* Table: RM___MAKANAN                                          */
+/*==============================================================*/
+create table RM___MAKANAN 
+(
+   ID_RUMAH_MAKAN       integer                        not null,
+   ID_MAKANAN           integer                        not null,
+   constraint PK_RM___MAKANAN primary key clustered (ID_RUMAH_MAKAN, ID_MAKANAN)
+);
+
+/*==============================================================*/
+/* Index: RM___MAKANAN_PK                                       */
+/*==============================================================*/
+create unique clustered index RM___MAKANAN_PK on RM___MAKANAN (
+ID_RUMAH_MAKAN ASC,
+ID_MAKANAN ASC
+);
+
+/*==============================================================*/
+/* Index: RM___MAKANAN_FK                                       */
+/*==============================================================*/
+create index RM___MAKANAN_FK on RM___MAKANAN (
+ID_RUMAH_MAKAN ASC
+);
+
+/*==============================================================*/
+/* Index: RM___MAKANAN2_FK                                      */
+/*==============================================================*/
+create index RM___MAKANAN2_FK on RM___MAKANAN (
+ID_MAKANAN ASC
+);
+
+/*==============================================================*/
+/* Table: RM___MINUMAN                                          */
+/*==============================================================*/
+create table RM___MINUMAN 
+(
+   ID_RUMAH_MAKAN       integer                        not null,
+   ID_MINUMAN           integer                        not null,
+   constraint PK_RM___MINUMAN primary key clustered (ID_RUMAH_MAKAN, ID_MINUMAN)
+);
+
+/*==============================================================*/
+/* Index: RM___MINUMAN_PK                                       */
+/*==============================================================*/
+create unique clustered index RM___MINUMAN_PK on RM___MINUMAN (
+ID_RUMAH_MAKAN ASC,
+ID_MINUMAN ASC
+);
+
+/*==============================================================*/
+/* Index: RM___MINUMAN_FK                                       */
+/*==============================================================*/
+create index RM___MINUMAN_FK on RM___MINUMAN (
+ID_RUMAH_MAKAN ASC
+);
+
+/*==============================================================*/
+/* Index: RM___MINUMAN2_FK                                      */
+/*==============================================================*/
+create index RM___MINUMAN2_FK on RM___MINUMAN (
+ID_MINUMAN ASC
+);
+
+/*==============================================================*/
+/* Table: RUMAH_MAKAN                                           */
+/*==============================================================*/
+create table RUMAH_MAKAN 
+(
+   ID_RUMAH_MAKAN       integer                        not null,
+   ID_KATEGORI_RUMAH_MAKAN integer                        not null,
+   NAMA_RUMAH_MAKAN     varchar(50)                    null,
+   ALAMAT_RUMAH_MAKAN   varchar(200)                   null,
+   TELEPON_RUMAH_MAKAN  varchar(15)                    null,
+   LATITUDE_RUMAH_MAKAN varchar(30)                    null,
+   LONGITUDE_RUMAH_MAKAN varchar(30)                    null,
+   DESKRIPSI_RUMAH_MAKAN varchar(4096)                  null,
+   constraint PK_RUMAH_MAKAN primary key (ID_RUMAH_MAKAN)
+);
+
+/*==============================================================*/
+/* Index: RUMAH_MAKAN_PK                                        */
+/*==============================================================*/
+create unique index RUMAH_MAKAN_PK on RUMAH_MAKAN (
+ID_RUMAH_MAKAN ASC
+);
+
+/*==============================================================*/
+/* Index: KATEGORI_RM___RM_FK                                   */
+/*==============================================================*/
+create index KATEGORI_RM___RM_FK on RUMAH_MAKAN (
+ID_KATEGORI_RUMAH_MAKAN ASC
+);
+
+/*==============================================================*/
+/* Table: TOP_WISATA                                            */
+/*==============================================================*/
+create table TOP_WISATA 
+(
+   ID_TOP_WISATA        integer                        not null,
+   ID_WISATA            integer                        null,
+   RATE_TOP_WISATA      float                          null,
+   constraint PK_TOP_WISATA primary key (ID_TOP_WISATA)
+);
+
+/*==============================================================*/
+/* Index: TOP_WISATA_PK                                         */
+/*==============================================================*/
+create unique index TOP_WISATA_PK on TOP_WISATA (
+ID_TOP_WISATA ASC
+);
+
+/*==============================================================*/
+/* Index: WISATA_HOMEPAGE2_FK                                   */
+/*==============================================================*/
+create index WISATA_HOMEPAGE2_FK on TOP_WISATA (
+ID_WISATA ASC
+);
+
+/*==============================================================*/
+/* Table: TRANSPORTASI                                          */
+/*==============================================================*/
+create table TRANSPORTASI 
+(
+   ID_TRANSPORTASI      integer                        not null,
+   ID_KATEGORI_TRANSPORTASI integer                        not null,
+   NAMA_PERUSAHAAN_TRANSPORTASI varchar(100)                   null,
+   NOMOR_TELEPON_TRANSPORTASI varchar(15)                    null,
+   RUTE_ASAL            varchar(100)                   null,
+   RUTE_TUJUAN          varchar(100)                   null,
+   RUTE                 varchar(300)                   null,
+   JAM_OPERASIONAL      time                           null,
+   TARIF_MINIMAL        numeric(8,2)                   null,
+   constraint PK_TRANSPORTASI primary key (ID_TRANSPORTASI)
+);
+
+/*==============================================================*/
+/* Index: TRANSPORTASI_PK                                       */
+/*==============================================================*/
+create unique index TRANSPORTASI_PK on TRANSPORTASI (
+ID_TRANSPORTASI ASC
+);
+
+/*==============================================================*/
+/* Index: KATEGORI_TRANSPORTASI_FK                              */
+/*==============================================================*/
+create index KATEGORI_TRANSPORTASI_FK on TRANSPORTASI (
+ID_KATEGORI_TRANSPORTASI ASC
+);
+
+/*==============================================================*/
+/* Table: WISATA                                                */
+/*==============================================================*/
+create table WISATA 
+(
+   ID_WISATA            integer                        not null,
+   ID_TOP_WISATA        integer                        null,
+   ID_KATEGORI_WISATA   integer                        not null,
+   NAMA_WISATA          varchar(100)                   null,
+   LOKASI_WISATA        varchar(200)                   null,
+   TELEPON_WISATA       varchar(15)                    null,
+   DESKRIPSI_WISATA     varchar(4096)                  null,
+   LATITUDE_WISATA      varchar(50)                    null,
+   LONGITUDE_WISATA     varchar(50)                    null,
+   constraint PK_WISATA primary key (ID_WISATA)
+);
+
+/*==============================================================*/
+/* Index: WISATA_PK                                             */
+/*==============================================================*/
+create unique index WISATA_PK on WISATA (
+ID_WISATA ASC
+);
+
+/*==============================================================*/
+/* Index: KATEGORI___WISATA_FK                                  */
+/*==============================================================*/
+create index KATEGORI___WISATA_FK on WISATA (
+ID_KATEGORI_WISATA ASC
+);
+
+/*==============================================================*/
+/* Index: WISATA_HOMEPAGE_FK                                    */
+/*==============================================================*/
+create index WISATA_HOMEPAGE_FK on WISATA (
+ID_TOP_WISATA ASC
+);
+
+alter table GAMBAR_EVENT
+   add constraint FK_GAMBAR_E_GAMBAR____MONTH_EV foreign key (ID_MONTH_EVENT)
+      references MONTH_EVENT (ID_MONTH_EVENT)
+      on update restrict
+      on delete restrict;
+
+alter table GAMBAR_HOTEL
+   add constraint FK_GAMBAR_H_GAMBAR____HOTEL foreign key (ID_HOTEL)
+      references HOTEL (ID_HOTEL)
+      on update restrict
+      on delete restrict;
+
+alter table GAMBAR_RUMAH_MAKAN
+   add constraint FK_GAMBAR_R_GAMBAR____RUMAH_MA foreign key (ID_RUMAH_MAKAN)
+      references RUMAH_MAKAN (ID_RUMAH_MAKAN)
+      on update restrict
+      on delete restrict;
+
+alter table GAMBAR_TEMPAT_WISATA
+   add constraint FK_GAMBAR_T_GAMBAR____WISATA foreign key (ID_WISATA)
+      references WISATA (ID_WISATA)
+      on update restrict
+      on delete restrict;
+
+alter table GAMBAR_TRANSPORTASI
+   add constraint FK_GAMBAR_T_GAMBAR____TRANSPOR foreign key (ID_TRANSPORTASI)
+      references TRANSPORTASI (ID_TRANSPORTASI)
+      on update restrict
+      on delete restrict;
+
+alter table RM___MAKANAN
+   add constraint FK_RM___MAK_RM___MAKA_RUMAH_MA foreign key (ID_RUMAH_MAKAN)
+      references RUMAH_MAKAN (ID_RUMAH_MAKAN)
+      on update restrict
+      on delete restrict;
+
+alter table RM___MAKANAN
+   add constraint FK_RM___MAK_RM___MAKA_MAKANAN foreign key (ID_MAKANAN)
+      references MAKANAN (ID_MAKANAN)
+      on update restrict
+      on delete restrict;
+
+alter table RM___MINUMAN
+   add constraint FK_RM___MIN_RM___MINU_RUMAH_MA foreign key (ID_RUMAH_MAKAN)
+      references RUMAH_MAKAN (ID_RUMAH_MAKAN)
+      on update restrict
+      on delete restrict;
+
+alter table RM___MINUMAN
+   add constraint FK_RM___MIN_RM___MINU_MINUMAN foreign key (ID_MINUMAN)
+      references MINUMAN (ID_MINUMAN)
+      on update restrict
+      on delete restrict;
+
+alter table RUMAH_MAKAN
+   add constraint FK_RUMAH_MA_KATEGORI__KATEGORI foreign key (ID_KATEGORI_RUMAH_MAKAN)
+      references KATEGORI_RUMAH_MAKAN (ID_KATEGORI_RUMAH_MAKAN)
+      on update restrict
+      on delete restrict;
+
+alter table TOP_WISATA
+   add constraint FK_TOP_WISA_WISATA_HO_WISATA foreign key (ID_WISATA)
+      references WISATA (ID_WISATA)
+      on update restrict
+      on delete restrict;
+
+alter table TRANSPORTASI
+   add constraint FK_TRANSPOR_KATEGORI__KATEGORI foreign key (ID_KATEGORI_TRANSPORTASI)
+      references KATEGORI_TRANSPORTASI (ID_KATEGORI_TRANSPORTASI)
+      on update restrict
+      on delete restrict;
+
+alter table WISATA
+   add constraint FK_WISATA_KATEGORI__KATEGORI foreign key (ID_KATEGORI_WISATA)
+      references KATEGORI_WISATA (ID_KATEGORI_WISATA)
+      on update restrict
+      on delete restrict;
+
+alter table WISATA
+   add constraint FK_WISATA_WISATA_HO_TOP_WISA foreign key (ID_TOP_WISATA)
+      references TOP_WISATA (ID_TOP_WISATA)
+      on update restrict
+      on delete restrict;
+
