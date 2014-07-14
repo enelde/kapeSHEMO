@@ -13,8 +13,8 @@
 
 <div class="mediabox" style="background-color: gray; border: 1px solid #dddddd;">
     <img src="..\Content\image\01.jpg" />
-    <h3><strong>Portal Surabaya</strong></h3>
-    <p>@ViewBag.t</p>
+    <h3><strong>@ViewBag.judulDeskripsi</strong></h3>
+    <p>@ViewBag.deskripsi</p>
 </div>  
           
 <div class="row-page" style="background-color: #ffffff; min-height: 630px; ">    
@@ -23,7 +23,26 @@
     </div>
     <div class="rotator">
         <ul id="rotmenu">
-            <li>
+            @foreach (var top in @ViewBag.tops)
+            {                                 
+                <li>
+                    <a href="rot1">@top</a>
+                    <div style="display:none;">
+                        <div class="info_image">top.alamat</div>
+                        <div class="info_heading">Our Works</div>
+                        <div class="info_description">
+                            At vero eos et accusamus et iusto odio
+                            dignissimos ducimus qui blanditiis praesentium
+                            voluptatum deleniti atque corrupti quos dolores et
+                            quas molestias excepturi sint occaecati cupiditate
+                            non provident...
+                            <a href="#" class="more">Read more</a>
+                        </div>
+                    </div>
+                </li>                                  
+            }
+
+            @*<li>
                 <a href="rot1">Portfolio</a>
                 <div style="display:none;">
                     <div class="info_image">01.jpg</div>
@@ -97,7 +116,7 @@
                         <a href="#" class="more">Read more</a>
                     </div>
                 </div>
-            </li>
+            </li>*@
         </ul>
         <div id="rot1">
             <img src="" width="800" height="300" class="bg" alt="" />
