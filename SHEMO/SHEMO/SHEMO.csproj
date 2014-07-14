@@ -231,10 +231,10 @@
     <Content Include="Views\Hotel\index.cshtml" />
     <Content Include="Views\Transportasi\index.cshtml" />
     <Content Include="Views\RumahMakan\index.cshtml" />
+    <Content Include="Views\Acara\index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Acara\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
