@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      Sybase SQL Anywhere 12                       */
-/* Created on:     7/13/2014 1:43:33 PM                         */
+/* Created on:     7/14/2014 11:21:35 PM                        */
 /*==============================================================*/
 
 
@@ -136,15 +136,11 @@ drop index if exists RM___MAKANAN.RM___MAKANAN2_FK;
 
 drop index if exists RM___MAKANAN.RM___MAKANAN_FK;
 
-drop index if exists RM___MAKANAN.RM___MAKANAN_PK;
-
 drop table if exists RM___MAKANAN;
 
 drop index if exists RM___MINUMAN.RM___MINUMAN2_FK;
 
 drop index if exists RM___MINUMAN.RM___MINUMAN_FK;
-
-drop index if exists RM___MINUMAN.RM___MINUMAN_PK;
 
 drop table if exists RM___MINUMAN;
 
@@ -182,7 +178,7 @@ create table GAMBAR_EVENT
    ID_GAMBAR_EVENT      integer                        not null,
    ID_MONTH_EVENT       integer                        not null,
    NAMA_GAMBAR_EVENT    varchar(20)                    null,
-   GAMBAR_EVENT         long binary                    null,
+   GAMBAR_EVENT         varchar(1024)                  null,
    constraint PK_GAMBAR_EVENT primary key (ID_GAMBAR_EVENT)
 );
 
@@ -236,7 +232,7 @@ create table GAMBAR_RUMAH_MAKAN
    ID_RUMAH_MAKAN       integer                        null,
    NAMA_GAMBAR_RUMAH_MAKAN varchar(20)                    null,
    KETERANGAN_GAMBAR_RUMAH_MAKAN varchar(100)                   null,
-   GAMBAR_RUMAH_MAKAN   long binary                    null,
+   GAMBAR_RUMAH_MAKAN   varchar(1024)                  null,
    constraint PK_GAMBAR_RUMAH_MAKAN primary key (ID_GAMBAR_RUMAH_MAKAN)
 );
 
@@ -263,7 +259,7 @@ create table GAMBAR_TEMPAT_WISATA
    ID_WISATA            integer                        not null,
    NAMA_GAMBAR_WISATA   varchar(20)                    null,
    KETERANGAN_GAMBAR_WISATA varchar(100)                   null,
-   GAMBAR_WISATA        long binary                    null,
+   GAMBAR_WISATA        varchar(1024)                  null,
    constraint PK_GAMBAR_TEMPAT_WISATA primary key (ID_GAMBAR_WISATA)
 );
 
@@ -290,7 +286,7 @@ create table GAMBAR_TRANSPORTASI
    ID_TRANSPORTASI      integer                        not null,
    NAMA_GAMBAR_TRANSPORTASI varchar(20)                    null,
    KETERANGAN_GAMBAR_TRANSPORTASI varchar(100)                   null,
-   GAMBAR_TRANSPORTASI  long binary                    null,
+   GAMBAR_TRANSPORTASI  varchar(1024)                  null,
    constraint PK_GAMBAR_TRANSPORTASI primary key (ID_GAMBAR_TRANSPORTASI)
 );
 
@@ -449,15 +445,7 @@ create table RM___MAKANAN
 (
    ID_RUMAH_MAKAN       integer                        not null,
    ID_MAKANAN           integer                        not null,
-   constraint PK_RM___MAKANAN primary key clustered (ID_RUMAH_MAKAN, ID_MAKANAN)
-);
-
-/*==============================================================*/
-/* Index: RM___MAKANAN_PK                                       */
-/*==============================================================*/
-create unique clustered index RM___MAKANAN_PK on RM___MAKANAN (
-ID_RUMAH_MAKAN ASC,
-ID_MAKANAN ASC
+   constraint PK_RM___MAKANAN primary key (ID_RUMAH_MAKAN, ID_MAKANAN)
 );
 
 /*==============================================================*/
@@ -481,15 +469,7 @@ create table RM___MINUMAN
 (
    ID_RUMAH_MAKAN       integer                        not null,
    ID_MINUMAN           integer                        not null,
-   constraint PK_RM___MINUMAN primary key clustered (ID_RUMAH_MAKAN, ID_MINUMAN)
-);
-
-/*==============================================================*/
-/* Index: RM___MINUMAN_PK                                       */
-/*==============================================================*/
-create unique clustered index RM___MINUMAN_PK on RM___MINUMAN (
-ID_RUMAH_MAKAN ASC,
-ID_MINUMAN ASC
+   constraint PK_RM___MINUMAN primary key (ID_RUMAH_MAKAN, ID_MINUMAN)
 );
 
 /*==============================================================*/
