@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      Sybase SQL Anywhere 12                       */
-/* Created on:     7/13/2014 12:23:05 PM                        */
+/* Created on:     7/13/2014 1:43:33 PM                         */
 /*==============================================================*/
 
 
@@ -209,7 +209,7 @@ create table GAMBAR_HOTEL
    ID_HOTEL             integer                        null,
    NAMA_GAMBAR_HOTEL    varchar(20)                    null,
    KETERANGAN_GAMBAR_HOTEL varchar(100)                   null,
-   GAMBAR_HOTEL         long binary                    null,
+   GAMBAR_HOTEL         varchar(1024)                  null,
    constraint PK_GAMBAR_HOTEL primary key (ID_GAMBAR_HOTEL)
 );
 
@@ -426,8 +426,8 @@ create table MONTH_EVENT
    ID_MONTH_EVENT       integer                        not null,
    NAMA_EVENT           varchar(100)                   null,
    TELEPON_EVENT        varchar(15)                    null,
-   TANGGAL_MULAI        timestamp                      null,
-   TANGGAL_BERAKHIR     timestamp                      null,
+   TANGGAL_MULAI        date                           null,
+   TANGGAL_BERAKHIR     date                           null,
    LOKASI_EVENT         varchar(200)                   null,
    LATITUDE_EVENT       varchar(30)                    null,
    LONGITUDE_EVENT      varchar(30)                    null,
