@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      Sybase SQL Anywhere 12                       */
-/* Created on:     7/14/2014 11:21:35 PM                        */
+/* Created on:     7/15/2014 12:56:18 PM                        */
 /*==============================================================*/
 
 
@@ -312,9 +312,11 @@ create table HOTEL
    ID_HOTEL             integer                        not null,
    NAMA_HOTEL           varchar(100)                   null,
    ALAMAT_HOTEL         varchar(100)                   null,
-   TELEPON_HOTEL        varchar(15)                    null,
+   TELEPON_HOTEL        varchar(20)                    null,
    BINTANG              float                          null,
    WEBSITE              varchar(100)                   null,
+   LATITUDE_HOTEL       varchar(50)                    null,
+   LONGITUDE_HOTE       varchar(50)                    null,
    constraint PK_HOTEL primary key (ID_HOTEL)
 );
 
@@ -421,7 +423,7 @@ create table MONTH_EVENT
 (
    ID_MONTH_EVENT       integer                        not null,
    NAMA_EVENT           varchar(100)                   null,
-   TELEPON_EVENT        varchar(15)                    null,
+   TELEPON_EVENT        varchar(20)                    null,
    TANGGAL_MULAI        date                           null,
    TANGGAL_BERAKHIR     date                           null,
    LOKASI_EVENT         varchar(200)                   null,
@@ -495,7 +497,7 @@ create table RUMAH_MAKAN
    ID_KATEGORI_RUMAH_MAKAN integer                        not null,
    NAMA_RUMAH_MAKAN     varchar(50)                    null,
    ALAMAT_RUMAH_MAKAN   varchar(200)                   null,
-   TELEPON_RUMAH_MAKAN  varchar(15)                    null,
+   TELEPON_RUMAH_MAKAN  varchar(20)                    null,
    LATITUDE_RUMAH_MAKAN varchar(30)                    null,
    LONGITUDE_RUMAH_MAKAN varchar(30)                    null,
    DESKRIPSI_RUMAH_MAKAN varchar(4096)                  null,
@@ -549,7 +551,7 @@ create table TRANSPORTASI
    ID_TRANSPORTASI      integer                        not null,
    ID_KATEGORI_TRANSPORTASI integer                        not null,
    NAMA_PERUSAHAAN_TRANSPORTASI varchar(100)                   null,
-   NOMOR_TELEPON_TRANSPORTASI varchar(15)                    null,
+   NOMOR_TELEPON_TRANSPORTASI varchar(20)                    null,
    RUTE_ASAL            varchar(100)                   null,
    RUTE_TUJUAN          varchar(100)                   null,
    RUTE                 varchar(300)                   null,
@@ -582,7 +584,7 @@ create table WISATA
    ID_KATEGORI_WISATA   integer                        not null,
    NAMA_WISATA          varchar(100)                   null,
    LOKASI_WISATA        varchar(200)                   null,
-   TELEPON_WISATA       varchar(15)                    null,
+   TELEPON_WISATA       varchar(20)                    null,
    DESKRIPSI_WISATA     varchar(4096)                  null,
    LATITUDE_WISATA      varchar(50)                    null,
    LONGITUDE_WISATA     varchar(50)                    null,
