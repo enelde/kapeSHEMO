@@ -12,6 +12,7 @@ namespace SHEMO.Controllers
         // GET: /Acara/
         public ActionResult Index()
         {
+
             return View();
         }
 	}

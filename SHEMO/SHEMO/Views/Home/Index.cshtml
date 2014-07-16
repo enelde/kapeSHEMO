@@ -3,7 +3,7 @@
 }
 
 
-<div class="row-image">           
+<div class="row-image" style="min-width:900px">           
     @*<img src="../Content/image/surabaya.jpg" style="width:100%"/>*@
     <ul class="cb-slideshow">
         <li><span></span></li>
@@ -11,115 +11,36 @@
     </ul>                   
 </div>
 
-<div class="mediabox" style="background-color: gray; border: 1px solid #dddddd;">
-    <img src="..\Content\image\01.jpg" />
-    <h3><strong>@ViewBag.judulDeskripsi</strong></h3>
-    <p>@ViewBag.deskripsi</p>
+<div class="mediabox" style="background-color: gray; border: 1px solid #dddddd;min-width:900px">
+    <img src="..\Content\image\contoh\logo-surabaya.png" style="width:10%;height:10%" />
+    <h3><strong>@ViewBag.judulDeskripsiPortal</strong></h3>
+    <p>@ViewBag.deskripsiPortal</p>
 </div>  
           
-<div class="row-page" style="background-color: #ffffff; min-height: 630px; ">    
+<div class="row-page" style="background-color: #ffffff; min-height: 630px; min-width:900px">    
     <div>
-        <h3 style="color:black;padding-bottom:60px; text-align:center"><strong>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</strong></h3>
+        <h3 style="color:black;padding-bottom:10px; text-align:center"><strong>@ViewBag.judulTopWisata</strong></h3>
     </div>
     <div class="rotator">
         <ul id="rotmenu">
-            @foreach (var top in @ViewBag.tops)
-            {                                 
-                <li>
-                    <a href="rot1">@top</a>
-                    <div style="display:none;">
-                        <div class="info_image">top.alamat</div>
-                        <div class="info_heading">Our Works</div>
-                        <div class="info_description">
-                            At vero eos et accusamus et iusto odio
-                            dignissimos ducimus qui blanditiis praesentium
-                            voluptatum deleniti atque corrupti quos dolores et
-                            quas molestias excepturi sint occaecati cupiditate
-                            non provident...
-                            <a href="#" class="more">Read more</a>
+            @foreach (var data in @ViewBag.topWisata)
+            {                   
+                
+                    <li>                     
+                        <a href="rot1">@data[0]</a>
+                        <div style="display:none;">                        
+                            <div class="info_image">@data[3]</div>                                                    
+                            <div class="info_heading">@data[1]</div>
+                            <div class="info_description">
+                                @data[2]
+                                <a href="#" class="more">Read more</a>
+                            </div>                            
                         </div>
-                    </div>
-                </li>                                  
+                    </li>                   
             }
-
-            @*<li>
-                <a href="rot1">Portfolio</a>
-                <div style="display:none;">
-                    <div class="info_image">01.jpg</div>
-                    <div class="info_heading">Our Works</div>
-                    <div class="info_description">
-                        At vero eos et accusamus et iusto odio
-                        dignissimos ducimus qui blanditiis praesentium
-                        voluptatum deleniti atque corrupti quos dolores et
-                        quas molestias excepturi sint occaecati cupiditate
-                        non provident...
-                        <a href="#" class="more">Read more</a>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <a href="rot2">Services</a>
-                <div style="display:none;">
-                    <div class="info_image">pattern.png</div>
-                    <div class="info_heading">We serve</div>
-                    <div class="info_description">
-                        At vero eos et accusamus et iusto odio
-                        dignissimos ducimus qui blanditiis praesentium
-                        voluptatum deleniti atque corrupti quos dolores et
-                        quas molestias excepturi sint occaecati cupiditate
-                        non provident...
-                        <a href="#" class="more">Read more</a>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <a href="rot3">Contact</a>
-                <div style="display:none;">
-                    <div class="info_image">surabaya-2.jpg</div>
-                    <div class="info_heading">Get in touch</div>
-                    <div class="info_description">
-                        At vero eos et accusamus et iusto odio
-                        dignissimos ducimus qui blanditiis praesentium
-                        voluptatum deleniti atque corrupti quos dolores et
-          5              quas molestias excepturi sint occaecati cupiditate
-                        non provident...
-                        <a href="#" class="more">Read more</a>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <a href="rot4">Experiments</a>
-                <div style="display:none;">
-                    <div class="info_image">surabaya.jpg</div>
-                    <div class="info_heading">We do crazy stuff</div>
-                    <div class="info_description">
-                        At vero eos et accusamus et iusto odio
-                        dignissimos ducimus qui blanditiis praesentium
-                        voluptatum deleniti atque corrupti quos dolores et
-                        quas molestias excepturi sint occaecati cupiditate
-                        non provident...
-                        <a href="#" class="more">Read more</a>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <a href="rot5">Applications</a>
-                <div style="display:none;">
-                    <div class="info_image">5.jpg</div>
-                    <div class="info_heading">Working things</div>
-                    <div class="info_description">
-                        At vero eos et accusamus et iusto odio
-                        dignissimos ducimus qui blanditiis praesentium
-                        voluptatum deleniti atque corrupti quos dolores et
-                        quas molestias excepturi sint occaecati cupiditate
-                        non provident...
-                        <a href="#" class="more">Read more</a>
-                    </div>
-                </div>
-            </li>*@
         </ul>
         <div id="rot1">
-            <img src="" width="800" height="300" class="bg" alt="" />
+            <img src="" width="1200" height="500" class="bg" alt="" />
             <div class="heading">
                 <h1></h1>
             </div>
@@ -135,87 +56,48 @@
 
     <h2>
         <strong>
-            MACAM - MACAM
+            @ViewBag.judulKategori
         </strong>
     </h2>
     <div class="boxHeight-10">
-        <div class="boxHeight-inner-1">
+        @foreach(var data in @ViewBag.kategori)
+        {
+            <div class="boxHeight-inner-1">
             <div class="boxSmall-1">
                 <h4>
                     <strong>
-                        TESSSSSSSSSSSS
+                        @*@Html.ActionLink(data[0], "index", data[1])*@
+                        <a href="/@data[1]">@data[0]</a>                        
                     </strong>
                 </h4>
             </div>
             <div class="boxSmall-2-1" style="margin-top:-9px">
-
+                <img src= "@data[2]" style="width:100%; height:100%">
             </div>
         </div>
-        <div class="boxHeight-inner-1">
-            <div class="boxSmall-1">
-                <h4>
-                    <strong>
-                        TESSSSSSSSSSSS
-                    </strong>
-                </h4>
-            </div>
-            <div class="boxSmall-2-1" style="margin-top:-9px">
-
-            </div>
-        </div>
-        <div class="boxHeight-inner-1">
-            <div class="boxSmall-1">
-                <h4>
-                    <strong>
-                        TESSSSSSSSSSSS
-                    </strong>
-                </h4>
-            </div>
-            <div class="boxSmall-2-1" style="margin-top:-9px">
-
-            </div>
-        </div>
-        <div class="boxHeight-inner-1">
-            <div class="boxSmall-1">
-                <h4>
-                    <strong>
-                        TESSSSSSSSSSSS
-                    </strong>
-                </h4>
-            </div>
-            <div class="boxSmall-2-1" style="margin-top:-9px">
-
-            </div>
-        </div>
-        <div class="boxHeight-inner-1">
-            <div class="boxSmall-1">
-                <h4>
-                    <strong>
-                        TESSSSSSSSSSSS
-                    </strong>
-                </h4>
-            </div>
-            <div class="boxSmall-2-1" style="margin-top:-9px">
-
-            </div>
-        </div>
+        }        
     </div>       
 </div>
 
 <script>
-    $(function () {
+    $(function ()
+    {
         var current = 1;
 
-        var iterate = function () {
+        var iterate = function ()
+        {
             var i = parseInt(current + 1);
             var lis = $('#rotmenu').children('li').size();
             if (i > lis) i = 1;
             display($('#rotmenu li:nth-child(' + i + ')'));
         }
+
         display($('#rotmenu li:first'));
+
         var slidetime = setInterval(iterate, 3000);
 
-        $('#rotmenu li').bind('click', function (e) {
+        $('#rotmenu li').bind('click', function (e)
+        {
             clearTimeout(slidetime);
             display($(this));
             e.preventDefault();
@@ -259,7 +141,7 @@
                     $(this).remove();
                 });
             }
-        ).attr('src', '../Content/image/' + info_elem.find('.info_image').html()).attr('width', '800').attr('height', '300')
+        ).attr('src', '../Content/image/contoh/' + info_elem.find('.info_image').html()).attr('width', '1200').attr('height', '500')
         );
         }
     });

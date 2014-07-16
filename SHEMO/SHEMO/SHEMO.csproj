@@ -177,6 +177,19 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\image\01.jpg" />
+    <Content Include="Content\image\contoh\Blue-Bird.jpg" />
+    <Content Include="Content\image\contoh\Bu-Rudi.jpg" />
+    <Content Include="Content\image\contoh\gray.jpg" />
+    <Content Include="Content\image\contoh\Jembatan-Suramadu.jpg" />
+    <Content Include="Content\image\contoh\Kebun-Binatang-Surabaya.jpg" />
+    <Content Include="Content\image\contoh\logo-surabaya.png" />
+    <Content Include="Content\image\contoh\Masjid-Al-Akbar.jpg" />
+    <Content Include="Content\image\contoh\Monumen-Kapal-Selam.jpg" />
+    <Content Include="Content\image\contoh\Pantai-Kenjeran.gif" />
+    <Content Include="Content\image\contoh\Sahid-Surabaya.jpg" />
+    <Content Include="Content\image\contoh\Taman-Bungkul.jpg" />
+    <Content Include="Content\image\contoh\Tugu-Pahlawan.jpg" />
+    <Content Include="Content\image\contoh\Tunjungan-Plaza.jpg" />
     <Content Include="Content\image\pattern.png" />
     <Content Include="Content\image\surabaya-2.jpg" />
     <Content Include="Content\style-page.css" />
@@ -193,6 +206,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.easing.1.3.js" />
+    <Content Include="Scripts\jquery.rs.slideshow.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />

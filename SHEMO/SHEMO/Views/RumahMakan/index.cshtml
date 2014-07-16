@@ -2,30 +2,31 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="row-page" style="background-color: #FFCC99;">
+<div class="row-page" style="background-color: snow; min-width:950px">
     <h2>
-        RUMAH MAKAN!!!
+        @ViewBag.judul
     </h2>
-    <div class="mediabox-1" style="min-width: 700px">
-        <div class="boxSmall-2" style="float:left; width:75%; background-color:blue">
-
+    <div class="mediabox-1">
+        <div class="boxSmall-4" style="float:left; min-width:420px; background-color:blue">
+            <div id="images">
+                @foreach (var data in @ViewBag.namaRumahMakan)
+                {
+                    <div id=@data[1]>
+                        <img src=@data[2] style="width:100%;height:100%" />
+                        <div class="heading">
+                            <h1>@data[0]</h1>
+                        </div>
+                    </div>
+                }
+            </div>
         </div>
         <div class="boxSmall-2" style="float: left; width: 25%; background-color: transparent">
-            <div class="boxSmall-3">
-                Surabaya Timur
-            </div>
-            <div class="boxSmall-3">
-                Surabaya Barat
-            </div>
-            <div class="boxSmall-3">
-                Surabaya Selatan
-            </div>
-            <div class="boxSmall-3">
-                Surabaya Utara
-            </div>
-            <div class="boxSmall-3">
-                Surabaya Selatan
-            </div>
+            @foreach (var jenis in @ViewBag.daftarJenisRumahMakan)
+            {
+                <div class="boxSmall-3" style="width:185px">
+                    <a href=@jenis[1]>@jenis[0]</a>
+                </div>
+            }
         </div>
     </div>
 </div>
