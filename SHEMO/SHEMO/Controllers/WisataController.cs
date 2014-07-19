@@ -10,6 +10,18 @@ namespace SHEMO.Controllers
     {
         //
         // GET: /Wisata/
+
+        public ActionResult kategori(string jenisKategori)
+        {
+            ViewBag.judul = jenisKategori;
+            return View();
+        }
+
+        public ActionResult detail()
+        {            
+            return View();
+        }
+
         public ActionResult Index()
         {
             ViewBag.judul = "Daftar Jenis Wisata";
