@@ -1,0 +1,58 @@
+0	NULL	NULL
+1	Gurame Bakar Kecap	NULL
+2	Gurame Bakar Bumbu Cobek	NULL
+3	Gurame Bumbu Mangga	NULL
+4	Gurame Rica Rica	NULL
+5	Gurame Terbang	NULL
+6	Gurame Saos Melinjo	NULL
+7	Sop Gurame	NULL
+8	Sop Nila	NULL
+9	Nila Bakar Kecap	NULL
+10	Nila Bakar Bumbu Cobek	NULL
+11	Nila Rica Rica	NULL
+12	Nila Saos Melinjo	NULL
+13	Patin Bakar Bambu	NULL
+14	Patin Garang Asam	NULL
+15	Patin Bakar Daun TS	NULL
+16	Anak Ikan Mas Goreng	NULL
+17	Bandeng Bakar	NULL
+18	Pindang Bandeng	NULL
+19	Ikan Mas Pesmol	NULL
+20	Fillet Pecel Lele	NULL
+21	Baronang Bakar Kecap	NULL
+22	Baronang Bakar Daun TS	NULL
+23	Kerapu Saos Pedas	NULL
+24	Kerapu Saos Melinjo	NULL
+25	Dori Bumbu Lychee	NULL
+26	Dori Goreng Tepung	NULL
+27	Udang Bakar Madu	NULL
+28	Udang Goreng Telur Asin	NULL
+29	Udang Tumis Pete	NULL
+30	Udang Goreng Cabe	NULL
+31	Udang Garang Asam	NULL
+32	Kepiting Lada Hitam	NULL
+33	Kepiting Saos Pedas	NULL
+34	Kepiting Bakar Daun TS	NULL
+35	Kepiting Soka Terasi	NULL
+36	Cumi Bakar Kecap	NULL
+37	Cumi Bakar Daun	NULL
+38	Cumi Goreng Mangga	NULL
+39	Cumi Goreng Tepung	NULL
+40	Cumi Goreng Madu Kering	NULL
+41	Cumi Goreng Asin	NULL
+42	Soto Ayam	NULL
+43	Gepuk Pasundan	NULL
+44	Daging Sapi Dua Warna	NULL
+45	Iga Bakar Penyet	NULL
+46	Sop Iga Garang Asam	NULL
+47	Sop Buntut	NULL
+48	Sate Ayam	NULL
+49	Ayam Goreng Paha	NULL
+50	Ayam Goreng Dada	NULL
+51	Ayam Bakar Paha	NULL
+52	Ayam Bakar Dada	NULL
+53	Ayam Bakar Bumbu Rujak Paha	NULL
+54	Ayam Bakar Bumbu Rujak Dada	NULL
+55	Ayam Bekakak	NULL
+56	Ayam Bekakak Bumbu Rujak	NULL
+NULL	NULL	NULL

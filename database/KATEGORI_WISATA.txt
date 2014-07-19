@@ -1,0 +1,14 @@
+0	Uncategorized	NULL
+1	Bersejarah	NULL
+2	Religi	NULL
+3	Museum	NULL
+4	Monumen	NULL
+5	Taman Kota	NULL
+6	Mall	NULL
+7	Alam	NULL
+8	Pasar	NULL
+9	Kuliner	NULL
+10	Golf	NULL
+11	Kampung	NULL
+12	Suvenir	NULL
+NULL	NULL	NULL

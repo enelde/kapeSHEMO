@@ -1,0 +1,178 @@
+0	NULL	NULL	NULL	NULL	NULL	NULL	NULL
+1	Bumi Surabaya
+	Jl. Basuki Rahmat 106-128 Surabaya 60271
+	(6231) 5311234
+	5	NULL	-7.269402
+	112.741462
+2	JW Marriott
+	Jl. Embong Malang 85-89 Surabaya 60261
+	(6231) 5458888	5	NULL	-7.260414	112.737395
+
+3	Majapahit
+	Jl. Tunjungan 65-71 Surabaya 60275
+	(6231) 5454333	5	NULL	-7.260057	112.739411
+
+4	Shangri-La
+	Jl. Mayjen Sungkono 120 Surabaya 60256
+	(6231) 5661550	5	NULL	-7.29091	112.715493
+
+5	Sheraton Surabaya
+	Jl. Embong Malang 25-31
+	(6231) 5468000	5	NULL	-7.262425	112.738178
+
+6	Singgasana Surabaya
+	Jl. Gunungsari
+	(6231) 5678681
+	5	NULL	-7.307006	112.716164
+
+7	Equator Surabaya
+	Jl. Pakis Argosari 47 Surabaya 60225
+	(6231) 5687170	4	NULL	-7.29415	112.711848
+
+8	Garden Palace
+	Jl. Yos Sudarso 11
+	(6231) 3521001	4	NULL	-7.26375	112.746269
+
+9	Mercure Grand Mirama
+	Jl. Raya Darmo No. 68-78 Surabaya
+	(6231) 5623000
+	4	NULL	-7.29415	112.711848
+
+10	Novotel Surabaya
+	Jl. Ngagel 173-175 Surabaya 60246
+	(6231) 5018900	4	NULL	-7.290596	112.746631
+
+11	Somerset Surabaya
+	Jl. Raya Kupang Indah
+	(6231) 7328738
+	4	NULL	-7.284147	112.705379
+
+12	Surabaya Plaza (Radisson)
+	Plaza Boulevard Jl. Pemuda 31-37
+	(6231) 5316833	4	NULL	-7.263458	112.748176
+
+13	Tunjungan 
+	Jl. Tunjungan 102-104
+	(6231) 5466666	4	NULL	-7.262053	112.740301
+
+14	Bisanta Bidakara
+	Jl. Tegalsari 85
+	(6231) 5318930
+	3	NULL	-7.267459	112.736911
+
+15	Elmi
+	Jl. Panglima Sudirman 42-44
+	(6231) 5315615	3	NULL	-7.269982	112.743489
+
+16	Garden
+	Jl. Pemuda 21
+	(6231) 5321001	3	NULL	-7.264405	112.746536
+
+17	Ibis Rajawali
+	Jl. Rajawali 9-11
+	(6231) 3539994	3	NULL	-7.236669	112.737213
+
+18	Inna Simpang
+	Jl. Gubernur Suryo 1-3
+	(6231) 5342151
+	3	NULL	-7.263144	112.74249
+
+19	Sahid
+	Jl. Sumatera 1-15
+	(6231) 5032711	3	NULL	-7.266757	112.751456
+
+20	Santika
+	Jl. Pandegiling 45
+	(6231) 5667707	3	NULL	-7.277203	112.740425
+
+21	Surabaya Satelit
+	Jl. Mayjen Sungkono 139
+	(6231) 5615876	3	NULL	-7.289917	112.711556
+
+22	Weta Internasional
+	Jl. Gentengkali 3-11
+	(6231) 5319494	3	NULL	-7.258865	112.7429
+
+23	Cendana
+	Jl. Kombes Pol. M Doeryat
+	(6231) 5455333	2	NULL	-7.268508	112.739813
+
+24	fortuna
+	Jl. Darmokasli 25-27
+	(6231) 5631111	2	NULL	-7.295776	112.740663
+
+25	narita
+	Jl. Barata Jaya XVII/ 57-9
+	(6231) 5016969
+	2	NULL	-7.304933	112.760643
+
+26	Antariksa
+	Jl. Gresik 97
+	(6231) 3538951	1	NULL	-7.232422	112.720964
+
+27	Grand Kalimas
+	Jl. KH Mas Mansyur 151-153
+	(6231) 3541616	1	NULL	-7.230174	112.740865
+
+28	Lasmana	Jl. Bintoro 16
+	(6231) 5677152
+	1	NULL	-7.286238	112.737992
+
+29	Pregolan	Jl. Pregolan Bunder 11-15
+	(6231) 5341251
+	1	NULL	-7.267114	112.738877
+
+30	Semut
+	Jl. Samodra 9-11-15
+	(6231) 3524578	1	NULL	-7.24016	112.743296
+
+31	Tanjung 
+	Jl. Panglima Sudirman 43-45
+	(6231) 5344031	1	NULL	-7.269407	112.743783
+
+32	Akasia Grand
+	Pegirian 216
+	(031) 3764171
+	0.5	NULL	-7.231177	112.744965
+
+33	Andita
+	Cokroaminoto 2
+	(031) 5677325
+	0.5	NULL	-7.278701	112.741004
+
+34	Arjuna Indah
+	Raya Arjuna 62
+	(031) 5482804	0.5	NULL	-7.262425	112.725986
+
+35	Asia
+	Tembaan 55
+	(031) 5340194	0.5	NULL	-7.24694	112.736023
+
+36	Bali
+	Makam Peneleh 77
+	(031) 5483762
+	0.5	NULL	-7.251344	112.73862
+
+37	sparkling
+	JL. Kayun 2AB, Surabaya, Indonesia ?
+	(031) 5321388
+	0	NULL	-7.266438	112.749551
+
+38	pavilijoen
+	Jalan Genteng Besar 94-98, Indonesia
+	(031) 5343449	0	NULL	-7.258541	112.739123
+
+39	Paprica
+	Jalan Kalibokor Selatan 76, Surabaya 60283, 
+	(6231) 5020651	0	NULL	-7.287425	112.753001
+
+40	Gubeng
+	Jl Sumatera 18 Tambaksari Surabaya
+	(6231) 5031603	0	NULL	-7.266581	112.751
+
+41	Amaris
+	Jl. Kedung Doro No 1-3, Surabaya Center, Surabaya
+	(6231) 5482299
+	0	NULL	-7.258591	112.733287
+
+NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL

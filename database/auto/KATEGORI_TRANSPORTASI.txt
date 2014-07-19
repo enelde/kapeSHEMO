@@ -1,0 +1,9 @@
+0	Uncategorized	NULL
+1	Angkot	NULL
+2	Bus Kota	NULL
+3	Taksi	NULL
+4	Bus Antarkota	NULL
+5	Kereta Api	NULL
+6	Pesawat	NULL
+7	Kapal Laut	NULL
+NULL	NULL	NULL

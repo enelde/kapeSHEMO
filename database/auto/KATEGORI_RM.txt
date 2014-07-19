@@ -1,0 +1,15 @@
+0	Uncategorized	NULL
+1	Ayam/Bebek Olahan	NULL
+2	Lontong Balap	NULL
+3	Soto	NULL
+4	Sate	NULL
+5	Lontong Kupang	NULL
+6	Chinese Food	NULL
+7	Vegetarian	NULL
+8	Padang	NULL
+9	Fast Food	NULL
+10	Pizza	NULL
+11	All You Can Eat	NULL
+12	Steak	NULL
+13	Seafood	NULL
+NULL	NULL	NULL

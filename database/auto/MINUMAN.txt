@@ -1,0 +1,55 @@
+0	NULL	NULL
+1	 Es Teh Lychee	NULL
+2	Es Teh Lemon	NULL
+3	Es Teh Stawberry	NULL
+4	Es Teh Peach	NULL
+5	Es Teh Markisa	NULL
+6	Es Teh Guava	NULL
+7	Kelapa Muda	NULL
+8	Es Kelapa	NULL
+9	Es Jeruk Kelapa	NULL
+10	Es Kelapa Sirsak	NULL
+11	Es Sirsak	NULL
+12	Es Kopyor	NULL
+13	Es Jali – Jali	NULL
+14	Es Cendol	NULL
+15	Es Merah Delima	NULL
+16	Es Buah Campur	NULL
+17	Es Jeruk	NULL
+18	Jus Melon	NULL
+19	Jus Sayur Sari Mangga	NULL
+20	Jus Semangka	NULL
+21	Jus Kedondong	NULL
+22	Jus Jambu Kelutuk	NULL
+23	Jus Sirsak	NULL
+24	Jus Anggur	NULL
+25	Jus Strawbery	NULL
+26	Jus Terong Belanda	NULL
+27	Jus Duren	NULL
+28	Mineral Water	NULL
+29	Teh Botol	NULL
+30	Coca Cola	NULL
+31	Soda Gembira	NULL
+32	Bir Bintang	NULL
+33	Bir Bintang Besar	NULL
+34	Es Teh Tawar	NULL
+35	Es Teh Manis	NULL
+36	Teh Hangat Tawar	NULL
+37	Teh Hangat Manis	NULL
+38	Teh Panas Tawar	NULL
+39	Teh Panas Manis	NULL
+40	Teh Poci	NULL
+41	Teh Tarik	NULL
+42	Kopi Arabika	NULL
+43	Kopi Robusta	NULL
+44	Bandrek	NULL
+45	Sekoteng	NULL
+46	Wedang Jahe	NULL
+47	Wedang Ronde	NULL
+48	Hot Milo	NULL
+49	Cappuccino	NULL
+50	Iced Coffee	NULL
+51	Iced Capuccino	NULL
+52	Iced  Mochaccino	NULL
+53	Iced Cookies & Cream	NULL
+NULL	NULL	NULL
