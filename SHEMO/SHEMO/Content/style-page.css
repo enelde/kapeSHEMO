@@ -69,10 +69,10 @@
 .boxSmall-3 
 {
     width:100%;
-    height:12%;
+    height:8%;
     background-color:aqua;
-    font-size:20px;
-    padding-top:10px;
+    font-size:18px;
+    padding-top:5px;
     padding-right:10px;
     text-align:right;
 }

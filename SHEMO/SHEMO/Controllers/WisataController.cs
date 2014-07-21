@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SHEMO.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,9 +12,43 @@ namespace SHEMO.Controllers
         //
         // GET: /Wisata/
 
-        public ActionResult kategori(string jenisKategori)
+        kape_SHEMOEntities context = new kape_SHEMOEntities();
+        private IEnumerable<WISATA> GetAllDataWisata()
         {
-            ViewBag.judul = jenisKategori;
+            IEnumerable<WISATA> results = from b in context.WISATAs
+                                        select b;
+            return results;
+        }
+
+        private IEnumerable<KATEGORI_WISATA> GetAllDataKategoriWisata()
+        {
+            IEnumerable<KATEGORI_WISATA> results = from b in context.KATEGORI_WISATA
+                                          select b;
+            return results;
+        }
+
+        private IEnumerable<GAMBAR_TEMPAT_WISATA> GetAllDataGambarTempatWisata()
+        {
+            IEnumerable<GAMBAR_TEMPAT_WISATA> results = from b in context.GAMBAR_TEMPAT_WISATA
+                                                   select b;
+            return results;
+        }     
+
+        public ActionResult kategori(string jenisKategori)
+        {            
+            IEnumerable<GAMBAR_TEMPAT_WISATA> wisataKategori = GetAllDataGambarTempatWisata();
+
+            List<string> datas = new List<string>();
+            List<string> data1 = new List<string>();
+            data1.Add("Halo");
+            data1.Add("Bro");
+            //foreach (var data in wisataKategori)
+            //{
+            //    datas.Add(data.NAMA_WISATA);
+            //}
+
+
+            ViewBag.judul = wisataKategori.Count();
             return View();
         }
 
@@ -25,67 +60,40 @@ namespace SHEMO.Controllers
         public ActionResult Index()
         {
             ViewBag.judul = "Daftar Jenis Wisata";
+            IEnumerable<KATEGORI_WISATA> wisataKategori = GetAllDataKategoriWisata();
 
-            List<List<string>> daftarJenis = new List<List<string>>();
-            List<string> jenisWisata = new List<string>();
-            jenisWisata.Add("Wisata Alam");
-            jenisWisata.Add("#pilihan1");
-            daftarJenis.Add(jenisWisata);
+            List<List<string>> daftarJenisKategori = new List<List<string>>();
+            List<string> jenisKategoriWisata;
+            int number = 1;
+            foreach(var data in wisataKategori)
+            {
+                if(data.ID_KATEGORI_WISATA!=0)
+                {
+                    jenisKategoriWisata = new List<string>();
+                    string pilihan = "#pilihan" + number;
+                    jenisKategoriWisata.Add(data.KATEGORI_WISATA1);
+                    jenisKategoriWisata.Add(pilihan);
+                    number++;
+                    daftarJenisKategori.Add(jenisKategoriWisata);
+                }                
+            }
+            ViewBag.daftarJenisWisata = daftarJenisKategori;
 
-            jenisWisata = new List<string>();
-            jenisWisata.Add("Wisata Religi");
-            jenisWisata.Add("#pilihan2");
-            daftarJenis.Add(jenisWisata);
+            IEnumerable<GAMBAR_TEMPAT_WISATA> wisataGambar = GetAllDataGambarTempatWisata();
 
-            jenisWisata = new List<string>();
-            jenisWisata.Add("Wisata Bersejarah");
-            jenisWisata.Add("#pilihan3");
-            daftarJenis.Add(jenisWisata);
-
-            jenisWisata = new List<string>();
-            jenisWisata.Add("Wisata Budaya");
-            jenisWisata.Add("#pilihan4");
-            daftarJenis.Add(jenisWisata);
-
-            jenisWisata = new List<string>();
-            jenisWisata.Add("Wisata Kuliner");
-            jenisWisata.Add("#pilihan5");
-            daftarJenis.Add(jenisWisata);
-
-            ViewBag.daftarJenisWisata = daftarJenis;
-
-            daftarJenis = new List<List<string>>();
-            jenisWisata = new List<string>();
-            jenisWisata.Add("Blue Bird");
-            jenisWisata.Add("pilihan1");
-            jenisWisata.Add("../content/image/contoh/Blue-Bird.jpg");
-            daftarJenis.Add(jenisWisata);
-
-            jenisWisata = new List<string>();
-            jenisWisata.Add("Bu RUdi");
-            jenisWisata.Add("pilihan2");
-            jenisWisata.Add("../content/image/contoh/Bu-Rudi.jpg");
-            daftarJenis.Add(jenisWisata);
-
-            jenisWisata = new List<string>();
-            jenisWisata.Add("Jembatan Suramadu");
-            jenisWisata.Add("pilihan3");
-            jenisWisata.Add("../content/image/contoh/Jembatan-Suramadu.jpg");
-            daftarJenis.Add(jenisWisata);
-
-            jenisWisata = new List<string>();
-            jenisWisata.Add("gray");
-            jenisWisata.Add("pilihan4");
-            jenisWisata.Add("../content/image/contoh/gray.jpg");
-            daftarJenis.Add(jenisWisata);
-
-            jenisWisata = new List<string>();
-            jenisWisata.Add("Mall Tunjungan Plaza");
-            jenisWisata.Add("pilihan5");
-            jenisWisata.Add("../content/image/contoh/Tunjungan-Plaza.jpg");
-            daftarJenis.Add(jenisWisata);
-
-            ViewBag.namaWisata = daftarJenis;
+            daftarJenisKategori = new List<List<string>>();            
+            number = 1;
+            foreach (var data in wisataGambar)
+            {                
+                    jenisKategoriWisata = new List<string>();
+                    string pilihan = "pilihan" + number;
+                    jenisKategoriWisata.Add(data.NAMA_GAMBAR_WISATA);
+                    jenisKategoriWisata.Add(pilihan);
+                    jenisKategoriWisata.Add(data.GAMBAR_WISATA);                    
+                    number++;
+                    daftarJenisKategori.Add(jenisKategoriWisata);                
+            }
+            ViewBag.namaWisata = daftarJenisKategori;            
             return View();
         }
 	}

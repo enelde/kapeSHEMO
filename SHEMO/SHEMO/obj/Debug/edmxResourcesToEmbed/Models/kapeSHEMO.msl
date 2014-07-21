@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="kape_SHEMOModelStoreContainer" CdmEntityContainer="kape_SHEMOEntities">
+    <EntitySetMapping Name="GAMBAR_EVENT">
+      <EntityTypeMapping TypeName="kape_SHEMOModel.GAMBAR_EVENT">
+        <MappingFragment StoreEntitySet="GAMBAR_EVENT">
+          <ScalarProperty Name="ID_GAMBAR_EVENT" ColumnName="ID_GAMBAR_EVENT" />
+          <ScalarProperty Name="ID_MONTH_EVENT" ColumnName="ID_MONTH_EVENT" />
+          <ScalarProperty Name="NAMA_GAMBAR_EVENT" ColumnName="NAMA_GAMBAR_EVENT" />
+          <ScalarProperty Name="GAMBAR_EVENT1" ColumnName="GAMBAR_EVENT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAMBAR_HOTEL">
+      <EntityTypeMapping TypeName="kape_SHEMOModel.GAMBAR_HOTEL">
+        <MappingFragment StoreEntitySet="GAMBAR_HOTEL">
+          <ScalarProperty Name="ID_GAMBAR_HOTEL" ColumnName="ID_GAMBAR_HOTEL" />
+          <ScalarProperty Name="ID_HOTEL" ColumnName="ID_HOTEL" />
+          <ScalarProperty Name="NAMA_GAMBAR_HOTEL" ColumnName="NAMA_GAMBAR_HOTEL" />
+          <ScalarProperty Name="KETERANGAN_GAMBAR_HOTEL" ColumnName="KETERANGAN_GAMBAR_HOTEL" />
+          <ScalarProperty Name="GAMBAR_HOTEL1" ColumnName="GAMBAR_HOTEL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAMBAR_RUMAH_MAKAN">
+      <EntityTypeMapping TypeName="kape_SHEMOModel.GAMBAR_RUMAH_MAKAN">
+        <MappingFragment StoreEntitySet="GAMBAR_RUMAH_MAKAN">
+          <ScalarProperty Name="ID_GAMBAR_RUMAH_MAKAN" ColumnName="ID_GAMBAR_RUMAH_MAKAN" />
+          <ScalarProperty Name="ID_RUMAH_MAKAN" ColumnName="ID_RUMAH_MAKAN" />
+          <ScalarProperty Name="NAMA_GAMBAR_RUMAH_MAKAN" ColumnName="NAMA_GAMBAR_RUMAH_MAKAN" />
+          <ScalarProperty Name="KETERANGAN_GAMBAR_RUMAH_MAKAN" ColumnName="KETERANGAN_GAMBAR_RUMAH_MAKAN" />
+          <ScalarProperty Name="GAMBAR_RUMAH_MAKAN1" ColumnName="GAMBAR_RUMAH_MAKAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAMBAR_TEMPAT_WISATA">
+      <EntityTypeMapping TypeName="kape_SHEMOModel.GAMBAR_TEMPAT_WISATA">
+        <MappingFragment StoreEntitySet="GAMBAR_TEMPAT_WISATA">
+          <ScalarProperty Name="ID_GAMBAR_WISATA" ColumnName="ID_GAMBAR_WISATA" />
+          <ScalarProperty Name="ID_WISATA" ColumnName="ID_WISATA" />
+          <ScalarProperty Name="NAMA_GAMBAR_WISATA" ColumnName="NAMA_GAMBAR_WISATA" />
+          <ScalarProperty Name="KETERANGAN_GAMBAR_WISATA" ColumnName="KETERANGAN_GAMBAR_WISATA" />
+          <ScalarProperty Name="GAMBAR_WISATA" ColumnName="GAMBAR_WISATA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GAMBAR_TRANSPORTASI">
+      <EntityTypeMapping TypeName="kape_SHEMOModel.GAMBAR_TRANSPORTASI">
+        <MappingFragment StoreEntitySet="GAMBAR_TRANSPORTASI">
+          <ScalarProperty Name="ID_GAMBAR_TRANSPORTASI" ColumnName="ID_GAMBAR_TRANSPORTASI" />
+          <ScalarProperty Name="ID_TRANSPORTASI" ColumnName="ID_TRANSPORTASI" />
+          <ScalarProperty Name="NAMA_GAMBAR_TRANSPORTASI" ColumnName="NAMA_GAMBAR_TRANSPORTASI" />
+          <ScalarProperty Name="KETERANGAN_GAMBAR_TRANSPORTASI" ColumnName="KETERANGAN_GAMBAR_TRANSPORTASI" />
+          <ScalarProperty Name="GAMBAR_TRANSPORTASI1" ColumnName="GAMBAR_TRANSPORTASI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HOTELs">
+      <EntityTypeMapping TypeName="kape_SHEMOModel.HOTEL">
+        <MappingFragment StoreEntitySet="HOTEL">
+          <ScalarProperty Name="ID_HOTEL" ColumnName="ID_HOTEL" />
+          <ScalarProperty Name="NAMA_HOTEL" ColumnName="NAMA_HOTEL" />
+          <ScalarProperty Name="ALAMAT_HOTEL" ColumnName="ALAMAT_HOTEL" />
+          <ScalarProperty Name="TELEPON_HOTEL" ColumnName="TELEPON_HOTEL" />
+          <ScalarProperty Name="BINTANG" ColumnName="BINTANG" />
+          <ScalarProperty Name="WEBSITE" ColumnName="WEBSITE" />
+          <ScalarProperty Name="LATITUDE_HOTEL" ColumnName="LATITUDE_HOTEL" />
+          <ScalarProperty Name="LONGITUDE_HOTE" ColumnName="LONGITUDE_HOTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KATEGORI_RUMAH_MAKAN">
+      <EntityTypeMapping TypeName="kape_SHEMOModel.KATEGORI_RUMAH_MAKAN">
+        <MappingFragment StoreEntitySet="KATEGORI_RUMAH_MAKAN">
+          <ScalarProperty Name="ID_KATEGORI_RUMAH_MAKAN" ColumnName="ID_KATEGORI_RUMAH_MAKAN" />
+          <ScalarProperty Name="KATEGORI_RUMAH_MAKAN1" ColumnName="KATEGORI_RUMAH_MAKAN" />
+          <ScalarProperty Name="DESKRIPSI_KATEGORI_RUMAH_MAKAN" ColumnName="DESKRIPSI_KATEGORI_RUMAH_MAKAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KATEGORI_TRANSPORTASI">
+      <EntityTypeMapping TypeName="kape_SHEMOModel.KATEGORI_TRANSPORTASI">
+        <MappingFragment StoreEntitySet="KATEGORI_TRANSPORTASI">
+          <ScalarProperty Name="ID_KATEGORI_TRANSPORTASI" ColumnName="ID_KATEGORI_TRANSPORTASI" />
+          <ScalarProperty Name="NAMA_KATEGORI_TRANSPORTASI" ColumnName="NAMA_KATEGORI_TRANSPORTASI" />
+          <ScalarProperty Name="DESKRIPSI_KATEGORI_TRANSPORTASI" ColumnName="DESKRIPSI_KATEGORI_TRANSPORTASI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KATEGORI_WISATA">
+      <EntityTypeMapping TypeName="kape_SHEMOModel.KATEGORI_WISATA">
+        <MappingFragment StoreEntitySet="KATEGORI_WISATA">
+          <ScalarProperty Name="ID_KATEGORI_WISATA" ColumnName="ID_KATEGORI_WISATA" />
+          <ScalarProperty Name="KATEGORI_WISATA1" ColumnName="KATEGORI_WISATA" />
+          <ScalarProperty Name="DESKRIPSI_KATEGORI" ColumnName="DESKRIPSI_KATEGORI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAKANANs">
+      <EntityTypeMapping TypeName="kape_SHEMOModel.MAKANAN">
+        <MappingFragment StoreEntitySet="MAKANAN">
+          <ScalarProperty Name="ID_MAKANAN" ColumnName="ID_MAKANAN" />
+          <ScalarProperty Name="NAMA_MAKANAN" ColumnName="NAMA_MAKANAN" />
+          <ScalarProperty Name="HARGA_NORMAL_MAKANAN" ColumnName="HARGA_NORMAL_MAKANAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MINUMen">
+      <EntityTypeMapping TypeName="kape_SHEMOModel.MINUMAN">
+        <MappingFragment StoreEntitySet="MINUMAN">
+          <ScalarProperty Name="ID_MINUMAN" ColumnName="ID_MINUMAN" />
+          <ScalarProperty Name="MINUMAN1" ColumnName="MINUMAN" />
+          <ScalarProperty Name="HARGA_NORMAL_MINUMAN" ColumnName="HARGA_NORMAL_MINUMAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MONTH_EVENT">
+      <EntityTypeMapping TypeName="kape_SHEMOModel.MONTH_EVENT">
+        <MappingFragment StoreEntitySet="MONTH_EVENT">
+          <ScalarProperty Name="ID_MONTH_EVENT" ColumnName="ID_MONTH_EVENT" />
+          <ScalarProperty Name="NAMA_EVENT" ColumnName="NAMA_EVENT" />
+          <ScalarProperty Name="TELEPON_EVENT" ColumnName="TELEPON_EVENT" />
+          <ScalarProperty Name="TANGGAL_MULAI" ColumnName="TANGGAL_MULAI" />
+          <ScalarProperty Name="TANGGAL_BERAKHIR" ColumnName="TANGGAL_BERAKHIR" />
+          <ScalarProperty Name="LOKASI_EVENT" ColumnName="LOKASI_EVENT" />
+          <ScalarProperty Name="LATITUDE_EVENT" ColumnName="LATITUDE_EVENT" />
+          <ScalarProperty Name="LONGITUDE_EVENT" ColumnName="LONGITUDE_EVENT" />
+          <ScalarProperty Name="DESKRIPSI_EVENT" ColumnName="DESKRIPSI_EVENT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RM___MAKANAN">
+      <EntityTypeMapping TypeName="kape_SHEMOModel.RM___MAKANAN">
+        <MappingFragment StoreEntitySet="RM___MAKANAN">
+          <ScalarProperty Name="ID_RUMAH_MAKAN" ColumnName="ID_RUMAH_MAKAN" />
+          <ScalarProperty Name="ID_MAKANAN" ColumnName="ID_MAKANAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RM___MINUMAN">
+      <EntityTypeMapping TypeName="kape_SHEMOModel.RM___MINUMAN">
+        <MappingFragment StoreEntitySet="RM___MINUMAN">
+          <ScalarProperty Name="ID_RUMAH_MAKAN" ColumnName="ID_RUMAH_MAKAN" />
+          <ScalarProperty Name="ID_MINUMAN" ColumnName="ID_MINUMAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RUMAH_MAKAN">
+      <EntityTypeMapping TypeName="kape_SHEMOModel.RUMAH_MAKAN">
+        <MappingFragment StoreEntitySet="RUMAH_MAKAN">
+          <ScalarProperty Name="ID_RUMAH_MAKAN" ColumnName="ID_RUMAH_MAKAN" />
+          <ScalarProperty Name="ID_KATEGORI_RUMAH_MAKAN" ColumnName="ID_KATEGORI_RUMAH_MAKAN" />
+          <ScalarProperty Name="NAMA_RUMAH_MAKAN" ColumnName="NAMA_RUMAH_MAKAN" />
+          <ScalarProperty Name="ALAMAT_RUMAH_MAKAN" ColumnName="ALAMAT_RUMAH_MAKAN" />
+          <ScalarProperty Name="TELEPON_RUMAH_MAKAN" ColumnName="TELEPON_RUMAH_MAKAN" />
+          <ScalarProperty Name="LATITUDE_RUMAH_MAKAN" ColumnName="LATITUDE_RUMAH_MAKAN" />
+          <ScalarProperty Name="LONGITUDE_RUMAH_MAKAN" ColumnName="LONGITUDE_RUMAH_MAKAN" />
+          <ScalarProperty Name="DESKRIPSI_RUMAH_MAKAN" ColumnName="DESKRIPSI_RUMAH_MAKAN" />
+          <ScalarProperty Name="HARGA_PENAMBAH" ColumnName="HARGA_PENAMBAH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="kape_SHEMOModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TOP_WISATA">
+      <EntityTypeMapping TypeName="kape_SHEMOModel.TOP_WISATA">
+        <MappingFragment StoreEntitySet="TOP_WISATA">
+          <ScalarProperty Name="ID_TOP_WISATA" ColumnName="ID_TOP_WISATA" />
+          <ScalarProperty Name="ID_WISATA" ColumnName="ID_WISATA" />
+          <ScalarProperty Name="RATE_TOP_WISATA" ColumnName="RATE_TOP_WISATA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRANSPORTASIs">
+      <EntityTypeMapping TypeName="kape_SHEMOModel.TRANSPORTASI">
+        <MappingFragment StoreEntitySet="TRANSPORTASI">
+          <ScalarProperty Name="ID_TRANSPORTASI" ColumnName="ID_TRANSPORTASI" />
+          <ScalarProperty Name="ID_KATEGORI_TRANSPORTASI" ColumnName="ID_KATEGORI_TRANSPORTASI" />
+          <ScalarProperty Name="NAMA_PERUSAHAAN_TRANSPORTASI" ColumnName="NAMA_PERUSAHAAN_TRANSPORTASI" />
+          <ScalarProperty Name="NOMOR_TELEPON_TRANSPORTASI" ColumnName="NOMOR_TELEPON_TRANSPORTASI" />
+          <ScalarProperty Name="RUTE_ASAL" ColumnName="RUTE_ASAL" />
+          <ScalarProperty Name="RUTE_TUJUAN" ColumnName="RUTE_TUJUAN" />
+          <ScalarProperty Name="RUTE" ColumnName="RUTE" />
+          <ScalarProperty Name="JAM_OPERASIONAL" ColumnName="JAM_OPERASIONAL" />
+          <ScalarProperty Name="TARIF_MINIMAL" ColumnName="TARIF_MINIMAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WISATAs">
+      <EntityTypeMapping TypeName="kape_SHEMOModel.WISATA">
+        <MappingFragment StoreEntitySet="WISATA">
+          <ScalarProperty Name="ID_WISATA" ColumnName="ID_WISATA" />
+          <ScalarProperty Name="ID_TOP_WISATA" ColumnName="ID_TOP_WISATA" />
+          <ScalarProperty Name="ID_KATEGORI_WISATA" ColumnName="ID_KATEGORI_WISATA" />
+          <ScalarProperty Name="NAMA_WISATA" ColumnName="NAMA_WISATA" />
+          <ScalarProperty Name="LOKASI_WISATA" ColumnName="LOKASI_WISATA" />
+          <ScalarProperty Name="TELEPON_WISATA" ColumnName="TELEPON_WISATA" />
+          <ScalarProperty Name="DESKRIPSI_WISATA" ColumnName="DESKRIPSI_WISATA" />
+          <ScalarProperty Name="LATITUDE_WISATA" ColumnName="LATITUDE_WISATA" />
+          <ScalarProperty Name="LONGITUDE_WISATA" ColumnName="LONGITUDE_WISATA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="kape_SHEMOModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="kape_SHEMOModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="kape_SHEMOModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="kape_SHEMOModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="kape_SHEMOModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="kape_SHEMOModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="kape_SHEMOModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="kape_SHEMOModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="kape_SHEMOModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

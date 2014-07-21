@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="kape_SHEMOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="GAMBAR_EVENT">
+    <Key>
+      <PropertyRef Name="ID_GAMBAR_EVENT" />
+    </Key>
+    <Property Name="ID_GAMBAR_EVENT" Type="Int32" Nullable="false" />
+    <Property Name="ID_MONTH_EVENT" Type="Int32" Nullable="false" />
+    <Property Name="NAMA_GAMBAR_EVENT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="GAMBAR_EVENT1" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="GAMBAR_HOTEL">
+    <Key>
+      <PropertyRef Name="ID_GAMBAR_HOTEL" />
+    </Key>
+    <Property Name="ID_GAMBAR_HOTEL" Type="Int32" Nullable="false" />
+    <Property Name="ID_HOTEL" Type="Int32" />
+    <Property Name="NAMA_GAMBAR_HOTEL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="KETERANGAN_GAMBAR_HOTEL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="GAMBAR_HOTEL1" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="GAMBAR_RUMAH_MAKAN">
+    <Key>
+      <PropertyRef Name="ID_GAMBAR_RUMAH_MAKAN" />
+    </Key>
+    <Property Name="ID_GAMBAR_RUMAH_MAKAN" Type="Int32" Nullable="false" />
+    <Property Name="ID_RUMAH_MAKAN" Type="Int32" />
+    <Property Name="NAMA_GAMBAR_RUMAH_MAKAN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="KETERANGAN_GAMBAR_RUMAH_MAKAN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="GAMBAR_RUMAH_MAKAN1" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="GAMBAR_TEMPAT_WISATA">
+    <Key>
+      <PropertyRef Name="ID_GAMBAR_WISATA" />
+    </Key>
+    <Property Name="ID_GAMBAR_WISATA" Type="Int32" Nullable="false" />
+    <Property Name="ID_WISATA" Type="Int32" Nullable="false" />
+    <Property Name="NAMA_GAMBAR_WISATA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="KETERANGAN_GAMBAR_WISATA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="GAMBAR_WISATA" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="GAMBAR_TRANSPORTASI">
+    <Key>
+      <PropertyRef Name="ID_GAMBAR_TRANSPORTASI" />
+    </Key>
+    <Property Name="ID_GAMBAR_TRANSPORTASI" Type="Int32" Nullable="false" />
+    <Property Name="ID_TRANSPORTASI" Type="Int32" Nullable="false" />
+    <Property Name="NAMA_GAMBAR_TRANSPORTASI" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="KETERANGAN_GAMBAR_TRANSPORTASI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="GAMBAR_TRANSPORTASI1" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="HOTEL">
+    <Key>
+      <PropertyRef Name="ID_HOTEL" />
+    </Key>
+    <Property Name="ID_HOTEL" Type="Int32" Nullable="false" />
+    <Property Name="NAMA_HOTEL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ALAMAT_HOTEL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TELEPON_HOTEL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="BINTANG" Type="Double" />
+    <Property Name="WEBSITE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LATITUDE_HOTEL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LONGITUDE_HOTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="KATEGORI_RUMAH_MAKAN">
+    <Key>
+      <PropertyRef Name="ID_KATEGORI_RUMAH_MAKAN" />
+    </Key>
+    <Property Name="ID_KATEGORI_RUMAH_MAKAN" Type="Int32" Nullable="false" />
+    <Property Name="KATEGORI_RUMAH_MAKAN1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DESKRIPSI_KATEGORI_RUMAH_MAKAN" Type="String" MaxLength="4096" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="KATEGORI_TRANSPORTASI">
+    <Key>
+      <PropertyRef Name="ID_KATEGORI_TRANSPORTASI" />
+    </Key>
+    <Property Name="ID_KATEGORI_TRANSPORTASI" Type="Int32" Nullable="false" />
+    <Property Name="NAMA_KATEGORI_TRANSPORTASI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DESKRIPSI_KATEGORI_TRANSPORTASI" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="KATEGORI_WISATA">
+    <Key>
+      <PropertyRef Name="ID_KATEGORI_WISATA" />
+    </Key>
+    <Property Name="ID_KATEGORI_WISATA" Type="Int32" Nullable="false" />
+    <Property Name="KATEGORI_WISATA1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DESKRIPSI_KATEGORI" Type="String" MaxLength="4096" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MAKANAN">
+    <Key>
+      <PropertyRef Name="ID_MAKANAN" />
+    </Key>
+    <Property Name="ID_MAKANAN" Type="Int32" Nullable="false" />
+    <Property Name="NAMA_MAKANAN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="HARGA_NORMAL_MAKANAN" Type="Decimal" Precision="8" Scale="2" />
+  </EntityType>
+  <EntityType Name="MINUMAN">
+    <Key>
+      <PropertyRef Name="ID_MINUMAN" />
+    </Key>
+    <Property Name="ID_MINUMAN" Type="Int32" Nullable="false" />
+    <Property Name="MINUMAN1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="HARGA_NORMAL_MINUMAN" Type="Decimal" Precision="8" Scale="2" />
+  </EntityType>
+  <EntityType Name="MONTH_EVENT">
+    <Key>
+      <PropertyRef Name="ID_MONTH_EVENT" />
+    </Key>
+    <Property Name="ID_MONTH_EVENT" Type="Int32" Nullable="false" />
+    <Property Name="NAMA_EVENT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TELEPON_EVENT" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TANGGAL_MULAI" Type="DateTime" Precision="0" />
+    <Property Name="TANGGAL_BERAKHIR" Type="DateTime" Precision="0" />
+    <Property Name="LOKASI_EVENT" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="LATITUDE_EVENT" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="LONGITUDE_EVENT" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DESKRIPSI_EVENT" Type="String" MaxLength="4096" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="RM___MAKANAN">
+    <Key>
+      <PropertyRef Name="ID_RUMAH_MAKAN" />
+      <PropertyRef Name="ID_MAKANAN" />
+    </Key>
+    <Property Name="ID_RUMAH_MAKAN" Type="Int32" Nullable="false" />
+    <Property Name="ID_MAKANAN" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RM___MINUMAN">
+    <Key>
+      <PropertyRef Name="ID_RUMAH_MAKAN" />
+      <PropertyRef Name="ID_MINUMAN" />
+    </Key>
+    <Property Name="ID_RUMAH_MAKAN" Type="Int32" Nullable="false" />
+    <Property Name="ID_MINUMAN" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RUMAH_MAKAN">
+    <Key>
+      <PropertyRef Name="ID_RUMAH_MAKAN" />
+    </Key>
+    <Property Name="ID_RUMAH_MAKAN" Type="Int32" Nullable="false" />
+    <Property Name="ID_KATEGORI_RUMAH_MAKAN" Type="Int32" Nullable="false" />
+    <Property Name="NAMA_RUMAH_MAKAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ALAMAT_RUMAH_MAKAN" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="TELEPON_RUMAH_MAKAN" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="LATITUDE_RUMAH_MAKAN" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="LONGITUDE_RUMAH_MAKAN" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DESKRIPSI_RUMAH_MAKAN" Type="String" MaxLength="4096" FixedLength="false" Unicode="false" />
+    <Property Name="HARGA_PENAMBAH" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TOP_WISATA">
+    <Key>
+      <PropertyRef Name="ID_TOP_WISATA" />
+    </Key>
+    <Property Name="ID_TOP_WISATA" Type="Int32" Nullable="false" />
+    <Property Name="ID_WISATA" Type="Int32" />
+    <Property Name="RATE_TOP_WISATA" Type="Double" />
+  </EntityType>
+  <EntityType Name="TRANSPORTASI">
+    <Key>
+      <PropertyRef Name="ID_TRANSPORTASI" />
+    </Key>
+    <Property Name="ID_TRANSPORTASI" Type="Int32" Nullable="false" />
+    <Property Name="ID_KATEGORI_TRANSPORTASI" Type="Int32" Nullable="false" />
+    <Property Name="NAMA_PERUSAHAAN_TRANSPORTASI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NOMOR_TELEPON_TRANSPORTASI" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="RUTE_ASAL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RUTE_TUJUAN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RUTE" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="JAM_OPERASIONAL" Type="Time" Precision="7" />
+    <Property Name="TARIF_MINIMAL" Type="Decimal" Precision="8" Scale="2" />
+  </EntityType>
+  <EntityType Name="WISATA">
+    <Key>
+      <PropertyRef Name="ID_WISATA" />
+    </Key>
+    <Property Name="ID_WISATA" Type="Int32" Nullable="false" />
+    <Property Name="ID_TOP_WISATA" Type="Int32" />
+    <Property Name="ID_KATEGORI_WISATA" Type="Int32" Nullable="false" />
+    <Property Name="NAMA_WISATA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LOKASI_WISATA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="TELEPON_WISATA" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="DESKRIPSI_WISATA" Type="String" MaxLength="4096" FixedLength="false" Unicode="false" />
+    <Property Name="LATITUDE_WISATA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LONGITUDE_WISATA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="kape_SHEMOEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="GAMBAR_EVENT" EntityType="Self.GAMBAR_EVENT" />
+    <EntitySet Name="GAMBAR_HOTEL" EntityType="Self.GAMBAR_HOTEL" />
+    <EntitySet Name="GAMBAR_RUMAH_MAKAN" EntityType="Self.GAMBAR_RUMAH_MAKAN" />
+    <EntitySet Name="GAMBAR_TEMPAT_WISATA" EntityType="Self.GAMBAR_TEMPAT_WISATA" />
+    <EntitySet Name="GAMBAR_TRANSPORTASI" EntityType="Self.GAMBAR_TRANSPORTASI" />
+    <EntitySet Name="HOTELs" EntityType="Self.HOTEL" />
+    <EntitySet Name="KATEGORI_RUMAH_MAKAN" EntityType="Self.KATEGORI_RUMAH_MAKAN" />
+    <EntitySet Name="KATEGORI_TRANSPORTASI" EntityType="Self.KATEGORI_TRANSPORTASI" />
+    <EntitySet Name="KATEGORI_WISATA" EntityType="Self.KATEGORI_WISATA" />
+    <EntitySet Name="MAKANANs" EntityType="Self.MAKANAN" />
+    <EntitySet Name="MINUMen" EntityType="Self.MINUMAN" />
+    <EntitySet Name="MONTH_EVENT" EntityType="Self.MONTH_EVENT" />
+    <EntitySet Name="RM___MAKANAN" EntityType="Self.RM___MAKANAN" />
+    <EntitySet Name="RM___MINUMAN" EntityType="Self.RM___MINUMAN" />
+    <EntitySet Name="RUMAH_MAKAN" EntityType="Self.RUMAH_MAKAN" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="TOP_WISATA" EntityType="Self.TOP_WISATA" />
+    <EntitySet Name="TRANSPORTASIs" EntityType="Self.TRANSPORTASI" />
+    <EntitySet Name="WISATAs" EntityType="Self.WISATA" />
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(kape_SHEMOModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(kape_SHEMOModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

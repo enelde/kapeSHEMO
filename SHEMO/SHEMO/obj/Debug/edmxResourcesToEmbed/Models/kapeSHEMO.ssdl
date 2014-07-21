@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="kape_SHEMOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="GAMBAR_EVENT">
+    <Key>
+      <PropertyRef Name="ID_GAMBAR_EVENT" />
+    </Key>
+    <Property Name="ID_GAMBAR_EVENT" Type="int" Nullable="false" />
+    <Property Name="ID_MONTH_EVENT" Type="int" Nullable="false" />
+    <Property Name="NAMA_GAMBAR_EVENT" Type="varchar" MaxLength="20" />
+    <Property Name="GAMBAR_EVENT" Type="varchar" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="GAMBAR_HOTEL">
+    <Key>
+      <PropertyRef Name="ID_GAMBAR_HOTEL" />
+    </Key>
+    <Property Name="ID_GAMBAR_HOTEL" Type="int" Nullable="false" />
+    <Property Name="ID_HOTEL" Type="int" />
+    <Property Name="NAMA_GAMBAR_HOTEL" Type="varchar" MaxLength="20" />
+    <Property Name="KETERANGAN_GAMBAR_HOTEL" Type="varchar" MaxLength="100" />
+    <Property Name="GAMBAR_HOTEL" Type="varchar" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="GAMBAR_RUMAH_MAKAN">
+    <Key>
+      <PropertyRef Name="ID_GAMBAR_RUMAH_MAKAN" />
+    </Key>
+    <Property Name="ID_GAMBAR_RUMAH_MAKAN" Type="int" Nullable="false" />
+    <Property Name="ID_RUMAH_MAKAN" Type="int" />
+    <Property Name="NAMA_GAMBAR_RUMAH_MAKAN" Type="varchar" MaxLength="20" />
+    <Property Name="KETERANGAN_GAMBAR_RUMAH_MAKAN" Type="varchar" MaxLength="100" />
+    <Property Name="GAMBAR_RUMAH_MAKAN" Type="varchar" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="GAMBAR_TEMPAT_WISATA">
+    <Key>
+      <PropertyRef Name="ID_GAMBAR_WISATA" />
+    </Key>
+    <Property Name="ID_GAMBAR_WISATA" Type="int" Nullable="false" />
+    <Property Name="ID_WISATA" Type="int" Nullable="false" />
+    <Property Name="NAMA_GAMBAR_WISATA" Type="varchar" MaxLength="20" />
+    <Property Name="KETERANGAN_GAMBAR_WISATA" Type="varchar" MaxLength="100" />
+    <Property Name="GAMBAR_WISATA" Type="varchar" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="GAMBAR_TRANSPORTASI">
+    <Key>
+      <PropertyRef Name="ID_GAMBAR_TRANSPORTASI" />
+    </Key>
+    <Property Name="ID_GAMBAR_TRANSPORTASI" Type="int" Nullable="false" />
+    <Property Name="ID_TRANSPORTASI" Type="int" Nullable="false" />
+    <Property Name="NAMA_GAMBAR_TRANSPORTASI" Type="varchar" MaxLength="20" />
+    <Property Name="KETERANGAN_GAMBAR_TRANSPORTASI" Type="varchar" MaxLength="100" />
+    <Property Name="GAMBAR_TRANSPORTASI" Type="varchar" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="HOTEL">
+    <Key>
+      <PropertyRef Name="ID_HOTEL" />
+    </Key>
+    <Property Name="ID_HOTEL" Type="int" Nullable="false" />
+    <Property Name="NAMA_HOTEL" Type="varchar" MaxLength="100" />
+    <Property Name="ALAMAT_HOTEL" Type="varchar" MaxLength="100" />
+    <Property Name="TELEPON_HOTEL" Type="varchar" MaxLength="20" />
+    <Property Name="BINTANG" Type="float" />
+    <Property Name="WEBSITE" Type="varchar" MaxLength="100" />
+    <Property Name="LATITUDE_HOTEL" Type="varchar" MaxLength="50" />
+    <Property Name="LONGITUDE_HOTE" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="KATEGORI_RUMAH_MAKAN">
+    <Key>
+      <PropertyRef Name="ID_KATEGORI_RUMAH_MAKAN" />
+    </Key>
+    <Property Name="ID_KATEGORI_RUMAH_MAKAN" Type="int" Nullable="false" />
+    <Property Name="KATEGORI_RUMAH_MAKAN" Type="varchar" MaxLength="50" />
+    <Property Name="DESKRIPSI_KATEGORI_RUMAH_MAKAN" Type="varchar" MaxLength="4096" />
+  </EntityType>
+  <EntityType Name="KATEGORI_TRANSPORTASI">
+    <Key>
+      <PropertyRef Name="ID_KATEGORI_TRANSPORTASI" />
+    </Key>
+    <Property Name="ID_KATEGORI_TRANSPORTASI" Type="int" Nullable="false" />
+    <Property Name="NAMA_KATEGORI_TRANSPORTASI" Type="varchar" MaxLength="100" />
+    <Property Name="DESKRIPSI_KATEGORI_TRANSPORTASI" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="KATEGORI_WISATA">
+    <Key>
+      <PropertyRef Name="ID_KATEGORI_WISATA" />
+    </Key>
+    <Property Name="ID_KATEGORI_WISATA" Type="int" Nullable="false" />
+    <Property Name="KATEGORI_WISATA" Type="varchar" MaxLength="30" />
+    <Property Name="DESKRIPSI_KATEGORI" Type="varchar" MaxLength="4096" />
+  </EntityType>
+  <EntityType Name="MAKANAN">
+    <Key>
+      <PropertyRef Name="ID_MAKANAN" />
+    </Key>
+    <Property Name="ID_MAKANAN" Type="int" Nullable="false" />
+    <Property Name="NAMA_MAKANAN" Type="varchar" MaxLength="100" />
+    <Property Name="HARGA_NORMAL_MAKANAN" Type="numeric" Precision="8" Scale="2" />
+  </EntityType>
+  <EntityType Name="MINUMAN">
+    <Key>
+      <PropertyRef Name="ID_MINUMAN" />
+    </Key>
+    <Property Name="ID_MINUMAN" Type="int" Nullable="false" />
+    <Property Name="MINUMAN" Type="varchar" MaxLength="100" />
+    <Property Name="HARGA_NORMAL_MINUMAN" Type="numeric" Precision="8" Scale="2" />
+  </EntityType>
+  <EntityType Name="MONTH_EVENT">
+    <Key>
+      <PropertyRef Name="ID_MONTH_EVENT" />
+    </Key>
+    <Property Name="ID_MONTH_EVENT" Type="int" Nullable="false" />
+    <Property Name="NAMA_EVENT" Type="varchar" MaxLength="100" />
+    <Property Name="TELEPON_EVENT" Type="varchar" MaxLength="15" />
+    <Property Name="TANGGAL_MULAI" Type="date" />
+    <Property Name="TANGGAL_BERAKHIR" Type="date" />
+    <Property Name="LOKASI_EVENT" Type="varchar" MaxLength="200" />
+    <Property Name="LATITUDE_EVENT" Type="varchar" MaxLength="30" />
+    <Property Name="LONGITUDE_EVENT" Type="varchar" MaxLength="30" />
+    <Property Name="DESKRIPSI_EVENT" Type="varchar" MaxLength="4096" />
+  </EntityType>
+  <EntityType Name="RM___MAKANAN">
+    <Key>
+      <PropertyRef Name="ID_RUMAH_MAKAN" />
+      <PropertyRef Name="ID_MAKANAN" />
+    </Key>
+    <Property Name="ID_RUMAH_MAKAN" Type="int" Nullable="false" />
+    <Property Name="ID_MAKANAN" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RM___MINUMAN">
+    <Key>
+      <PropertyRef Name="ID_RUMAH_MAKAN" />
+      <PropertyRef Name="ID_MINUMAN" />
+    </Key>
+    <Property Name="ID_RUMAH_MAKAN" Type="int" Nullable="false" />
+    <Property Name="ID_MINUMAN" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RUMAH_MAKAN">
+    <Key>
+      <PropertyRef Name="ID_RUMAH_MAKAN" />
+    </Key>
+    <Property Name="ID_RUMAH_MAKAN" Type="int" Nullable="false" />
+    <Property Name="ID_KATEGORI_RUMAH_MAKAN" Type="int" Nullable="false" />
+    <Property Name="NAMA_RUMAH_MAKAN" Type="varchar" MaxLength="50" />
+    <Property Name="ALAMAT_RUMAH_MAKAN" Type="varchar" MaxLength="200" />
+    <Property Name="TELEPON_RUMAH_MAKAN" Type="varchar" MaxLength="15" />
+    <Property Name="LATITUDE_RUMAH_MAKAN" Type="varchar" MaxLength="30" />
+    <Property Name="LONGITUDE_RUMAH_MAKAN" Type="varchar" MaxLength="30" />
+    <Property Name="DESKRIPSI_RUMAH_MAKAN" Type="varchar" MaxLength="4096" />
+    <Property Name="HARGA_PENAMBAH" Type="money" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TOP_WISATA">
+    <Key>
+      <PropertyRef Name="ID_TOP_WISATA" />
+    </Key>
+    <Property Name="ID_TOP_WISATA" Type="int" Nullable="false" />
+    <Property Name="ID_WISATA" Type="int" />
+    <Property Name="RATE_TOP_WISATA" Type="float" />
+  </EntityType>
+  <EntityType Name="TRANSPORTASI">
+    <Key>
+      <PropertyRef Name="ID_TRANSPORTASI" />
+    </Key>
+    <Property Name="ID_TRANSPORTASI" Type="int" Nullable="false" />
+    <Property Name="ID_KATEGORI_TRANSPORTASI" Type="int" Nullable="false" />
+    <Property Name="NAMA_PERUSAHAAN_TRANSPORTASI" Type="varchar" MaxLength="100" />
+    <Property Name="NOMOR_TELEPON_TRANSPORTASI" Type="varchar" MaxLength="15" />
+    <Property Name="RUTE_ASAL" Type="varchar" MaxLength="100" />
+    <Property Name="RUTE_TUJUAN" Type="varchar" MaxLength="100" />
+    <Property Name="RUTE" Type="varchar" MaxLength="300" />
+    <Property Name="JAM_OPERASIONAL" Type="time" Precision="7" />
+    <Property Name="TARIF_MINIMAL" Type="numeric" Precision="8" Scale="2" />
+  </EntityType>
+  <EntityType Name="WISATA">
+    <Key>
+      <PropertyRef Name="ID_WISATA" />
+    </Key>
+    <Property Name="ID_WISATA" Type="int" Nullable="false" />
+    <Property Name="ID_TOP_WISATA" Type="int" />
+    <Property Name="ID_KATEGORI_WISATA" Type="int" Nullable="false" />
+    <Property Name="NAMA_WISATA" Type="varchar" MaxLength="100" />
+    <Property Name="LOKASI_WISATA" Type="varchar" MaxLength="200" />
+    <Property Name="TELEPON_WISATA" Type="varchar" MaxLength="15" />
+    <Property Name="DESKRIPSI_WISATA" Type="varchar" MaxLength="4096" />
+    <Property Name="LATITUDE_WISATA" Type="varchar" MaxLength="50" />
+    <Property Name="LONGITUDE_WISATA" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="kape_SHEMOModelStoreContainer">
+    <EntitySet Name="GAMBAR_EVENT" EntityType="Self.GAMBAR_EVENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GAMBAR_HOTEL" EntityType="Self.GAMBAR_HOTEL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GAMBAR_RUMAH_MAKAN" EntityType="Self.GAMBAR_RUMAH_MAKAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GAMBAR_TEMPAT_WISATA" EntityType="Self.GAMBAR_TEMPAT_WISATA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GAMBAR_TRANSPORTASI" EntityType="Self.GAMBAR_TRANSPORTASI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HOTEL" EntityType="Self.HOTEL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KATEGORI_RUMAH_MAKAN" EntityType="Self.KATEGORI_RUMAH_MAKAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KATEGORI_TRANSPORTASI" EntityType="Self.KATEGORI_TRANSPORTASI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KATEGORI_WISATA" EntityType="Self.KATEGORI_WISATA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MAKANAN" EntityType="Self.MAKANAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MINUMAN" EntityType="Self.MINUMAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MONTH_EVENT" EntityType="Self.MONTH_EVENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RM___MAKANAN" EntityType="Self.RM___MAKANAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RM___MINUMAN" EntityType="Self.RM___MINUMAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RUMAH_MAKAN" EntityType="Self.RUMAH_MAKAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TOP_WISATA" EntityType="Self.TOP_WISATA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRANSPORTASI" EntityType="Self.TRANSPORTASI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WISATA" EntityType="Self.WISATA" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

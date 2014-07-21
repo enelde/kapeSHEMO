@@ -53,6 +53,8 @@
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Entity.Design" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -164,7 +166,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AcaraController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AdministratorController.cs" />
+    <Compile Include="Controllers\aController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HotelController.cs" />
     <Compile Include="Controllers\RumahMakanController.cs" />
@@ -174,7 +176,85 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\GAMBAR_EVENT.cs">
+      <DependentUpon>kapeSHEMO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GAMBAR_HOTEL.cs">
+      <DependentUpon>kapeSHEMO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GAMBAR_RUMAH_MAKAN.cs">
+      <DependentUpon>kapeSHEMO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GAMBAR_TEMPAT_WISATA.cs">
+      <DependentUpon>kapeSHEMO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GAMBAR_TRANSPORTASI.cs">
+      <DependentUpon>kapeSHEMO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HOTEL.cs">
+      <DependentUpon>kapeSHEMO.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\kapeSHEMO.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kapeSHEMO.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\kapeSHEMO.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kapeSHEMO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\kapeSHEMO.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kapeSHEMO.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\KATEGORI_RUMAH_MAKAN.cs">
+      <DependentUpon>kapeSHEMO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\KATEGORI_TRANSPORTASI.cs">
+      <DependentUpon>kapeSHEMO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\KATEGORI_WISATA.cs">
+      <DependentUpon>kapeSHEMO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MAKANAN.cs">
+      <DependentUpon>kapeSHEMO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MINUMAN.cs">
+      <DependentUpon>kapeSHEMO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MONTH_EVENT.cs">
+      <DependentUpon>kapeSHEMO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RM___MAKANAN.cs">
+      <DependentUpon>kapeSHEMO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RM___MINUMAN.cs">
+      <DependentUpon>kapeSHEMO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RUMAH_MAKAN.cs">
+      <DependentUpon>kapeSHEMO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>kapeSHEMO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagrams_Result.cs">
+      <DependentUpon>kapeSHEMO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>kapeSHEMO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TOP_WISATA.cs">
+      <DependentUpon>kapeSHEMO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TRANSPORTASI.cs">
+      <DependentUpon>kapeSHEMO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WISATA.cs">
+      <DependentUpon>kapeSHEMO.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -182,6 +262,8 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\image\01.jpg" />
+    <Content Include="Content\image\Balai_pemuda.jpg" />
+    <Content Include="Content\image\bg_junction.jpg" />
     <Content Include="Content\image\contoh\Blue-Bird.jpg" />
     <Content Include="Content\image\contoh\Bu-Rudi.jpg" />
     <Content Include="Content\image\contoh\gray.jpg" />
@@ -195,8 +277,15 @@
     <Content Include="Content\image\contoh\Taman-Bungkul.jpg" />
     <Content Include="Content\image\contoh\Tugu-Pahlawan.jpg" />
     <Content Include="Content\image\contoh\Tunjungan-Plaza.jpg" />
+    <Content Include="Content\image\masjid_ampel.jpg" />
+    <Content Include="Content\image\Monumen_Kapal_Selam.jpg" />
+    <Content Include="Content\image\museum_sepuluh_nopember.jpg" />
+    <Content Include="Content\image\pakuwon_golf.jpg" />
+    <Content Include="Content\image\pantai_kenjeran.jpg" />
+    <Content Include="Content\image\pasar_kedungdoro.jpg" />
     <Content Include="Content\image\pattern.png" />
     <Content Include="Content\image\surabaya-2.jpg" />
+    <Content Include="Content\image\Taman_Bungkul.jpg" />
     <Content Include="Content\style-page.css" />
     <Content Include="Content\styleForSlideShowImage.css" />
     <Content Include="Content\image\surabaya.jpg" />
@@ -206,6 +295,23 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\kapeSHEMO.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>kapeSHEMO.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\kapeSHEMO.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>kapeSHEMO.edmx</DependentUpon>
+      <LastGenOutput>kapeSHEMO.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\kapeSHEMO.edmx.diagram">
+      <DependentUpon>kapeSHEMO.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\kapeSHEMO.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>kapeSHEMO.edmx</DependentUpon>
+      <LastGenOutput>kapeSHEMO.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -253,10 +359,10 @@
     <Content Include="Views\Acara\index.cshtml" />
     <Content Include="Views\Wisata\kategori.cshtml" />
     <Content Include="Views\Wisata\detail.cshtml" />
+    <Content Include="Views\a\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Administrator\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -264,6 +370,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
