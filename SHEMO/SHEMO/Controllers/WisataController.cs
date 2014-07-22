@@ -35,26 +35,88 @@ namespace SHEMO.Controllers
         }     
 
         public ActionResult kategori(string jenisKategori)
-        {            
-            IEnumerable<GAMBAR_TEMPAT_WISATA> wisataKategori = GetAllDataGambarTempatWisata();
+        {
+            IEnumerable<KATEGORI_WISATA> wisataKategori = GetAllDataKategoriWisata();
+            IEnumerable<WISATA> wisata = GetAllDataWisata();
+            IEnumerable<GAMBAR_TEMPAT_WISATA> wisataGambar = GetAllDataGambarTempatWisata();
+            int idKategori;
 
-            List<string> datas = new List<string>();
-            List<string> data1 = new List<string>();
-            data1.Add("Halo");
-            data1.Add("Bro");
-            //foreach (var data in wisataKategori)
-            //{
-            //    datas.Add(data.NAMA_WISATA);
-            //}
+            List<List<string>> listGambar = new List<List<string>>();
+            List<string> gambar;
+            foreach(var data in wisataKategori)
+            {
+                ViewBag.judul = "WISATA " + jenisKategori;
+                if(jenisKategori == data.KATEGORI_WISATA1)
+                {
+                    idKategori = data.ID_KATEGORI_WISATA;
+                    foreach(var tempData in wisata)
+                    {                        
+                        if(tempData.ID_KATEGORI_WISATA == idKategori)
+                        {
+                            gambar = new List<string>();
+                            gambar.Add("../detail/" + tempData.ID_WISATA.ToString());
+                            foreach(var tempDataGambar in wisataGambar)
+                            {
+                                if(tempDataGambar.ID_WISATA == tempData.ID_WISATA)
+                                {
+                                    gambar.Add("../content/image/wisata/" + tempDataGambar.GAMBAR_WISATA);
+                                }
+                            }
+                            listGambar.Add(gambar);
+                        }                        
+                    }
+                    ViewBag.gambar = listGambar;
+                    return View();
+                }
+            }
+
+            return View("Error");
+
+            //IEnumerable<GAMBAR_TEMPAT_WISATA> wisataKategori = GetAllDataGambarTempatWisata();
+
+            //List<string> datas = new List<string>();
+            //List<string> data1 = new List<string>();
+            //data1.Add("Halo");
+            //data1.Add("Bro");
+            ////foreach (var data in wisataKategori)
+            ////{
+            ////    datas.Add(data.NAMA_WISATA);
+            ////}
 
 
-            ViewBag.judul = wisataKategori.Count();
-            return View();
+            //ViewBag.judul = wisataKategori.Count();
+            //return View();
         }
 
-        public ActionResult detail()
-        {            
-            return View();
+        public ActionResult detail(string ID)
+        {
+            IEnumerable<WISATA> wisata = GetAllDataWisata();
+            IEnumerable<GAMBAR_TEMPAT_WISATA> wisataGambar = GetAllDataGambarTempatWisata();
+
+            if (ID != null)
+            {
+                int idWisata = int.Parse(ID);
+                foreach (var data in wisata)
+                {
+                    if (data.ID_WISATA == idWisata)
+                    {
+                        ViewBag.judul = data.NAMA_WISATA;                         
+
+                        foreach (var temp in wisataGambar)
+                        {
+                            if (temp.ID_WISATA == data.ID_WISATA)
+                            {
+                                ViewBag.alamatGambar = "../content/image/wisata/" + temp.GAMBAR_WISATA;                                
+                                break;
+                            }
+                        }
+                        ViewBag.deskripsi = data.DESKRIPSI_WISATA;                                                
+                        return View();
+                    }
+                }
+            }
+            return View("error");
+            //return View();
         }
 
         public ActionResult Index()
@@ -81,18 +143,55 @@ namespace SHEMO.Controllers
 
             IEnumerable<GAMBAR_TEMPAT_WISATA> wisataGambar = GetAllDataGambarTempatWisata();
 
+            IEnumerable<WISATA> wisata = GetAllDataWisata();
+
             daftarJenisKategori = new List<List<string>>();            
             number = 1;
-            foreach (var data in wisataGambar)
-            {                
+
+            List<int> daftarIDWisata;
+            Random rnd = new Random();
+            int rand;
+            foreach(var temp in wisataKategori)
+            {
+                if(temp.ID_KATEGORI_WISATA!=0)
+                {
                     jenisKategoriWisata = new List<string>();
                     string pilihan = "pilihan" + number;
-                    jenisKategoriWisata.Add(data.NAMA_GAMBAR_WISATA);
+
+                    daftarIDWisata = new List<int>();
+                    foreach (var data in wisata)
+                    {
+                        if (data.ID_KATEGORI_WISATA == number)
+                        {
+                            daftarIDWisata.Add(data.ID_WISATA);
+                        }
+                    }
+                    rand = rnd.Next(daftarIDWisata.Count);
+
+                    foreach (var data in wisata)
+                    {
+                        if (data.ID_WISATA == daftarIDWisata[rand])
+                        {
+                            jenisKategoriWisata.Add(data.NAMA_WISATA);
+                            break;
+                        }
+                    }
                     jenisKategoriWisata.Add(pilihan);
-                    jenisKategoriWisata.Add(data.GAMBAR_WISATA);                    
+
+                    foreach (var data in wisataGambar)
+                    {
+                        if (data.ID_WISATA == daftarIDWisata[rand])
+                        {
+                            jenisKategoriWisata.Add("../content/image/wisata/" + data.GAMBAR_WISATA);
+                        }
+                    }
+
                     number++;
-                    daftarJenisKategori.Add(jenisKategoriWisata);                
-            }
+                    jenisKategoriWisata.Add("/wisata/kategori/"+temp.KATEGORI_WISATA1);
+                    jenisKategoriWisata.Add("/wisata/detail/"+daftarIDWisata[rand]);
+                    daftarJenisKategori.Add(jenisKategoriWisata);
+                }
+            } 
             ViewBag.namaWisata = daftarJenisKategori;            
             return View();
         }

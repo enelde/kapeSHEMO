@@ -14,8 +14,14 @@ namespace SHEMO
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                "detail wisata",
+                "wisata/detail/{ID}",
+                new { controller = "wisata", action = "detail" }
+            );
+
+            routes.MapRoute(
                 "kategori wisata",
-                "wisata/{jenisKategori}",
+                "wisata/kategori/{jenisKategori}",
                 new { controller = "wisata", action = "kategori" }
             );
 
