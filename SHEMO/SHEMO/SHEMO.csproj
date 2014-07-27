@@ -52,6 +52,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.Services" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -172,6 +174,7 @@
     <Compile Include="Controllers\RumahMakanController.cs" />
     <Compile Include="Controllers\TransportasiController.cs" />
     <Compile Include="Controllers\WisataController.cs" />
+    <Compile Include="Controllers\WISATAsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -453,6 +456,11 @@
     <Content Include="Views\Wisata\kategori.cshtml" />
     <Content Include="Views\Wisata\detail.cshtml" />
     <Content Include="Views\a\Index.cshtml" />
+    <Content Include="Views\WISATAs\Create.cshtml" />
+    <Content Include="Views\WISATAs\Delete.cshtml" />
+    <Content Include="Views\WISATAs\Details.cshtml" />
+    <Content Include="Views\WISATAs\Edit.cshtml" />
+    <Content Include="Views\WISATAs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

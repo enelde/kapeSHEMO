@@ -1,0 +1,128 @@
+﻿@model IEnumerable<SHEMO.Models.WISATA>
+
+@{
+    ViewBag.Title = "DATA WISATA";
+}
+
+<div class="row-page" style="background-color:snow">
+    <h2>@ViewBag.title</h2>
+    <div style="width:100px;background-color:gold;margin-left:auto;margin-right:auto">
+        <p style="text-align:center">
+            @Html.ActionLink("Create New", "Create")
+        </p>
+    </div>    
+    <div style="margin-left:10px;margin-right:10px;">
+        <table class="table" style="border-width:4px">
+            <tr style="background-color:lightblue">
+                @*<th>
+                    @Html.DisplayNameFor(model => model.ID_WISATA)
+                </th>*@
+                <th style="background-color:white;">
+                    @Html.DisplayNameFor(model => model.ID_TOP_WISATA)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ID_KATEGORI_WISATA)
+                </th>
+                <th style="background-color:white;">
+                    @Html.DisplayNameFor(model => model.NAMA_WISATA)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LOKASI_WISATA)
+                </th>
+                <th style="background-color:white;">
+                    @Html.DisplayNameFor(model => model.TELEPON_WISATA)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DESKRIPSI_WISATA)
+                </th>
+                <th style="background-color:white;">
+                    @Html.DisplayNameFor(model => model.LATITUDE_WISATA)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LONGITUDE_WISATA)
+                </th>
+                <th style="background-color:white"></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                if (@item.ID_WISATA % 2 == 0)
+                {
+                    <tr style="background-color:white">
+                        @*<td>
+                                @Html.DisplayFor(modelItem => item.ID_WISATA)
+                            </td>*@
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ID_TOP_WISATA)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ID_KATEGORI_WISATA)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NAMA_WISATA)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LOKASI_WISATA)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TELEPON_WISATA)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DESKRIPSI_WISATA)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LATITUDE_WISATA)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LONGITUDE_WISATA)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID_WISATA })
+                            @Html.ActionLink("Details", "Details", new { id = item.ID_WISATA })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ID_WISATA })
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    <tr style="background-color:lightblue">
+                        @*<td>
+                                @Html.DisplayFor(modelItem => item.ID_WISATA)
+                            </td>*@
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ID_TOP_WISATA)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ID_KATEGORI_WISATA)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NAMA_WISATA)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LOKASI_WISATA)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TELEPON_WISATA)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DESKRIPSI_WISATA)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LATITUDE_WISATA)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LONGITUDE_WISATA)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID_WISATA })
+                            @Html.ActionLink("Details", "Details", new { id = item.ID_WISATA })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ID_WISATA })
+                        </td>
+                    </tr>
+                }
+            }
+
+        </table>
+    </div>    
+</div>
+

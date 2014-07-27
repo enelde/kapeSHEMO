@@ -110,7 +110,8 @@ namespace SHEMO.Controllers
                                 break;
                             }
                         }
-                        ViewBag.deskripsi = data.DESKRIPSI_WISATA;                                                
+                        ViewBag.deskripsi = "Deskripsi : " + data.DESKRIPSI_WISATA;
+                        ViewBag.alamat = "Lokasi : " + data.LOKASI_WISATA;                      
                         return View();
                     }
                 }

@@ -1,0 +1,103 @@
+﻿@model SHEMO.Models.WISATA
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="row-page" style="background-color:snow">
+    <h2>Create</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>WISATA</h4>
+            <hr />
+            @Html.ValidationSummary(true)
+            <div class="form-group">
+                @Html.LabelFor(model => model.ID_WISATA, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10" style="padding-bottom:10px;">
+                    @*@ViewBag.counter*@
+                    @Html.EditorFor(model => model.ID_WISATA)
+                        @Html.ValidationMessageFor(model => model.ID_WISATA)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ID_TOP_WISATA, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ID_TOP_WISATA)
+                    @Html.ValidationMessageFor(model => model.ID_TOP_WISATA)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ID_KATEGORI_WISATA, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ID_KATEGORI_WISATA)
+                    @Html.ValidationMessageFor(model => model.ID_KATEGORI_WISATA)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.NAMA_WISATA, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.NAMA_WISATA)
+                    @Html.ValidationMessageFor(model => model.NAMA_WISATA)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.LOKASI_WISATA, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.LOKASI_WISATA)
+                    @Html.ValidationMessageFor(model => model.LOKASI_WISATA)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.TELEPON_WISATA, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TELEPON_WISATA)
+                    @Html.ValidationMessageFor(model => model.TELEPON_WISATA)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.DESKRIPSI_WISATA, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.DESKRIPSI_WISATA)
+                    @Html.ValidationMessageFor(model => model.DESKRIPSI_WISATA)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.LATITUDE_WISATA, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.LATITUDE_WISATA)
+                    @Html.ValidationMessageFor(model => model.LATITUDE_WISATA)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.LONGITUDE_WISATA, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.LONGITUDE_WISATA)
+                    @Html.ValidationMessageFor(model => model.LONGITUDE_WISATA)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+</div>

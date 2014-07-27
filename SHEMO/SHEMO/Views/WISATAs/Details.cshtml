@@ -1,0 +1,85 @@
+﻿@model SHEMO.Models.WISATA
+
+@{
+    ViewBag.Title = "Details";
+}
+<div class="row-page" style="background-color:snow">
+    <h2>Details</h2>
+
+    <div>        
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ID_TOP_WISATA)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ID_TOP_WISATA)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ID_KATEGORI_WISATA)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ID_KATEGORI_WISATA)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NAMA_WISATA)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NAMA_WISATA)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.LOKASI_WISATA)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.LOKASI_WISATA)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TELEPON_WISATA)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TELEPON_WISATA)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DESKRIPSI_WISATA)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DESKRIPSI_WISATA)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.LATITUDE_WISATA)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.LATITUDE_WISATA)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.LONGITUDE_WISATA)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.LONGITUDE_WISATA)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID_WISATA }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+
+</div>
+
+

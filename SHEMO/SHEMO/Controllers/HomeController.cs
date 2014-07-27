@@ -63,9 +63,22 @@ namespace SHEMO.Controllers
                         wisataTerima.Add("");
                         String desc = dataWisata.DESKRIPSI_WISATA;
 
-                        //difiltern desc
+                        String tempDesc = null;
 
-                        wisataTerima.Add(desc);
+                        for (int i = 0; i < 100; i++ )
+                        {
+                            if(desc != null)
+                            {
+                                if (i < desc.Length)
+                                {
+                                    tempDesc += desc[i];
+                                }                
+                            }                                        
+                        }
+
+                            //difiltern desc
+
+                        wisataTerima.Add(tempDesc);
 
                         foreach(var dataGambar in gambarWisata)
                         {
