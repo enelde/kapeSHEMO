@@ -1,4 +1,5 @@
 ﻿using System;
+using SHEMO.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,73 +9,195 @@ namespace SHEMO.Controllers
 {
     public class HotelController : Controller
     {
+        kape_SHEMOEntities context = new kape_SHEMOEntities();
+        private IEnumerable<HOTEL> GetAllDataHotel()
+        {
+            IEnumerable<HOTEL> results = from b in context.HOTELs
+                                         select b;
+            return results;
+        }
+
+        private IEnumerable<GAMBAR_HOTEL> GetAllDataGambarHotel()
+        {
+            IEnumerable<GAMBAR_HOTEL> results = from b in context.GAMBAR_HOTEL
+                                                select b;
+            return results;
+        }
+
+        public ActionResult detail(string ID)
+        {
+            IEnumerable<HOTEL> hotel = GetAllDataHotel();
+            IEnumerable<GAMBAR_HOTEL> hotelGambar = GetAllDataGambarHotel();
+
+            if (ID != null)
+            {
+                int idWisata = int.Parse(ID);
+                foreach (var data in hotel)
+                {
+                    if (data.ID_HOTEL == idWisata)
+                    {
+                        ViewBag.judul = data.NAMA_HOTEL;
+
+                        foreach (var temp in hotelGambar)
+                        {
+                            if (temp.ID_HOTEL == data.ID_HOTEL)
+                            {
+                                ViewBag.alamatGambar = "../content/image/hotel/" + temp.GAMBAR_HOTEL1;
+                                break;
+                            }
+                        }
+                        ViewBag.website = "Website : " + data.WEBSITE;
+                        ViewBag.telepon = "Telepon : " + data.TELEPON_HOTEL;
+                        return View();
+                    }
+                }
+            }
+            return View("error");
+            //return View();
+        }
+
+
+        public ActionResult kategori(string jenisKategori)
+        {
+            IEnumerable<HOTEL> dataHotel = GetAllDataHotel();            
+            IEnumerable<GAMBAR_HOTEL> hotelGambar = GetAllDataGambarHotel();
+
+            int idHotel;
+            List<List<string>> listGambar = new List<List<string>>();
+            List<string> gambar;
+            ViewBag.judul = "HOTEL Berbintang " + jenisKategori;
+            foreach (var data in dataHotel)
+            {                
+                if (jenisKategori == data.BINTANG.ToString())
+                {
+
+                    idHotel = data.ID_HOTEL; 
+                    foreach(var data1 in hotelGambar)
+                    {
+                        if(data1.ID_HOTEL==idHotel)
+                        {
+                            gambar = new List<string>();
+                            gambar.Add("../detail/" + idHotel.ToString());
+                            gambar.Add("../content/image/hotel/" + data1.GAMBAR_HOTEL1);                                                            
+                            listGambar.Add(gambar);
+                        }
+                    }
+                }
+            }
+            ViewBag.gambar = listGambar;
+            return View();            
+
+            //IEnumerable<GAMBAR_TEMPAT_WISATA> wisataKategori = GetAllDataGambarTempatWisata();
+
+            //List<string> datas = new List<string>();
+            //List<string> data1 = new List<string>();
+            //data1.Add("Halo");
+            //data1.Add("Bro");
+            ////foreach (var data in wisataKategori)
+            ////{
+            ////    datas.Add(data.NAMA_WISATA);
+            ////}
+
+
+            //ViewBag.judul = wisataKategori.Count();
+            //return View();
+        }
+
+
         //
         // GET: /Hotel/
         public ActionResult Index()
         {
             ViewBag.judul = "Daftar Jenis Hotel";
+            IEnumerable<HOTEL> dataHotel = GetAllDataHotel();
 
-            List<List<string>> daftarJenis = new List<List<string>>();
-            List<string> jenisHotel = new List<string>();
-            jenisHotel.Add("Surabaya Pusat");
-            jenisHotel.Add("#pilihan1");
-            daftarJenis.Add(jenisHotel);
+            List<List<string>> daftarJenisKategori = new List<List<string>>();
+            List<string> jenisKategoriHotel;
+            int number = 1;
+            foreach (var data in dataHotel)
+            {                
+                if(data.BINTANG != null)
+                {
+                    string temp = "" + data.BINTANG;
+                    int check = 0;
+                    foreach (var data1 in daftarJenisKategori)
+                    {
+                        if (temp == data1[0])
+                        {
+                            check = 1;
+                            break;
+                        }
+                    }
+                    if (check == 0)
+                    {
+                        jenisKategoriHotel = new List<string>();
+                        string pilihan = "#pilihan" + number;
+                        string jenis = "" + data.BINTANG;
+                        jenisKategoriHotel.Add(jenis);
+                        jenisKategoriHotel.Add(pilihan);
+                        number++;
+                        daftarJenisKategori.Add(jenisKategoriHotel);
+                    }    
+                }                                    
+            }
+            ViewBag.daftarJenisHotel = daftarJenisKategori;
 
-            jenisHotel = new List<string>();
-            jenisHotel.Add("Surabaya Barat");
-            jenisHotel.Add("#pilihan2");
-            daftarJenis.Add(jenisHotel);
+            IEnumerable<GAMBAR_HOTEL> hotelGambar = GetAllDataGambarHotel();
 
-            jenisHotel = new List<string>();
-            jenisHotel.Add("Surabaya Utara");
-            jenisHotel.Add("#pilihan3");
-            daftarJenis.Add(jenisHotel);
+            //IEnumerable<WISATA> wisata = GetAllDataWisata();
 
-            jenisHotel = new List<string>();
-            jenisHotel.Add("Surabaya Timur");
-            jenisHotel.Add("#pilihan4");
-            daftarJenis.Add(jenisHotel);
+            List<List<string>> daftarHotel = new List<List<string>>();
+            //daftarJenisKategori = new List<List<string>>();
+            number = 1;
+            
+            Random rnd = new Random();
+            int rand;
+            foreach (var temp in daftarJenisKategori)
+            {
 
-            jenisHotel = new List<string>();
-            jenisHotel.Add("Surabaya Selatan");
-            jenisHotel.Add("#pilihan5");
-            daftarJenis.Add(jenisHotel);
+                jenisKategoriHotel = new List<string>();
+                string pilihan = "pilihan" + number;
 
-            ViewBag.daftarJenisHotel = daftarJenis;
+                while(true)
+                {
+                    rand = rnd.Next(dataHotel.Count());
+                    int count = 0, check=0;
+                    foreach(var temp1 in dataHotel)
+                    {
+                        if(count==rand)
+                        {
+                            string bintang = ""+temp1.BINTANG;
+                            if(bintang == temp[0])
+                            {
+                                jenisKategoriHotel.Add(temp1.NAMA_HOTEL);
+                                jenisKategoriHotel.Add(pilihan);
+                                foreach(var temp2 in hotelGambar)
+                                {
+                                    if(temp2.ID_HOTEL == temp1.ID_HOTEL)
+                                    {
+                                        jenisKategoriHotel.Add("../content/image/hotel/" + temp2.GAMBAR_HOTEL1);
+                                        jenisKategoriHotel.Add("/hotel/kategori/" + temp[0]);
+                                        jenisKategoriHotel.Add("/hotel/detail/" + temp2.ID_HOTEL);
+                                        break;
+                                    }
+                                }
+                                check = 1;
+                                break;
+                            }
+                        }
+                        count++;
+                    }
+                    if(check==1)
+                    {
+                        break;
+                    }
+                }                                         
 
-            daftarJenis = new List<List<string>>();
-            jenisHotel = new List<string>();
-            jenisHotel.Add("Blue Bird");
-            jenisHotel.Add("pilihan1");
-            jenisHotel.Add("../content/image/contoh/Blue-Bird.jpg");
-            daftarJenis.Add(jenisHotel);
+                number++;                
+                daftarHotel.Add(jenisKategoriHotel);
 
-            jenisHotel = new List<string>();
-            jenisHotel.Add("Bu RUdi");
-            jenisHotel.Add("pilihan2");
-            jenisHotel.Add("../content/image/contoh/Bu-Rudi.jpg");
-            daftarJenis.Add(jenisHotel);
-
-            jenisHotel = new List<string>();
-            jenisHotel.Add("Jembatan Suramadu");
-            jenisHotel.Add("pilihan3");
-            jenisHotel.Add("../content/image/contoh/Jembatan-Suramadu.jpg");
-            daftarJenis.Add(jenisHotel);
-
-            jenisHotel = new List<string>();
-            jenisHotel.Add("gray");
-            jenisHotel.Add("pilihan4");
-            jenisHotel.Add("../content/image/contoh/gray.jpg");
-            daftarJenis.Add(jenisHotel);
-
-            jenisHotel = new List<string>();
-            jenisHotel.Add("Mall Tunjungan Plaza");
-            jenisHotel.Add("pilihan5");
-            jenisHotel.Add("../content/image/contoh/Tunjungan-Plaza.jpg");
-            daftarJenis.Add(jenisHotel);
-
-            ViewBag.namaHotel = daftarJenis;
-
+            }
+            ViewBag.namaHotel = daftarHotel;
             return View();
         }
 	}

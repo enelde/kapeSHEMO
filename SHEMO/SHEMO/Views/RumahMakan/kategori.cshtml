@@ -1,0 +1,19 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row-page" style="background-color: snow; min-width:1200px">
+    <h2>
+        @ViewBag.judul
+    </h2>
+    <div class="mediabox-1">
+        @foreach (var data in @ViewBag.gambar)
+        {
+            <div class="boxSmall-5">
+                <a href=@data[0]>
+                    <img src="/@data[1]" style="width:100%;height:100%" />
+                </a>
+            </div>
+        }
+    </div>
+</div>  

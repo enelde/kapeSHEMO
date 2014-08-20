@@ -26,6 +26,30 @@ namespace SHEMO
             );
 
             routes.MapRoute(
+                "detail hotel",
+                "hotel/detail/{ID}",
+                new { controller = "hotel", action = "detail" }
+            );
+
+            routes.MapRoute(
+                "kategori hotel",
+                "hotel/kategori/{jenisKategori}",
+                new { controller = "hotel", action = "kategori" }
+            );
+
+            routes.MapRoute(
+                "detail rumah makan",
+                "rumahmakan/detail/{ID}",
+                new { controller = "rumahmakan", action = "detail" }
+            );
+
+            routes.MapRoute(
+                "kategori rumah makan",
+                "rumahmakan/kategori/{jenisKategori}",
+                new { controller = "rumahmakan", action = "kategori" }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
