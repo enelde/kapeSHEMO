@@ -50,6 +50,18 @@ namespace SHEMO
             );
 
             routes.MapRoute(
+                "detail transportasi",
+                "transportasi/detail/{ID}",
+                new { controller = "transportasi", action = "detail" }
+            );
+
+            routes.MapRoute(
+                "kategori transportasi",
+                "transportasi/kategori/{jenisKategori}",
+                new { controller = "transportasi", action = "kategori" }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

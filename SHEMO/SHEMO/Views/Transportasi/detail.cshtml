@@ -1,0 +1,32 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row-page">
+    <div style="width:100%;height:30px;">
+        <h2>
+            @ViewBag.judul
+        </h2>
+    </div>
+    <div style="width:100%;">
+        <div class="boxSmall-6">
+            <img src="/@ViewBag.alamatGambar" style="width:100%; height:100%" />
+        </div>
+    </div>
+    <div style="width:100%;">
+        <div style="width:70%; margin-left:auto;margin-right:auto">
+            <p>
+                @ViewBag.telepon
+            </p>
+            <p>
+                @ViewBag.ruteAsal
+            </p>
+            <p>
+                @ViewBag.ruteTujuan
+            </p>
+            <p>
+                @ViewBag.jam
+            </p>
+        </div>
+    </div>
+</div>

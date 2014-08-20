@@ -324,6 +324,23 @@
     <Content Include="Content\image\rumahmakan\sederhana.jpg" />
     <Content Include="Content\image\rumahmakan\soto_madura.jpg" />
     <Content Include="Content\image\rumahmakan\soto_pak_sadi.jpg" />
+    <Content Include="Content\image\transportasi\air_asia.jpg" />
+    <Content Include="Content\image\transportasi\c.jpg" />
+    <Content Include="Content\image\transportasi\dkm.jpg" />
+    <Content Include="Content\image\transportasi\e1.jpg" />
+    <Content Include="Content\image\transportasi\garuda_indonesia.jpg" />
+    <Content Include="Content\image\transportasi\i.jpg" />
+    <Content Include="Content\image\transportasi\jnd.jpg" />
+    <Content Include="Content\image\transportasi\kai1.jpg" />
+    <Content Include="Content\image\transportasi\kai2.jpg" />
+    <Content Include="Content\image\transportasi\kai3.jpg" />
+    <Content Include="Content\image\transportasi\kai4.jpg" />
+    <Content Include="Content\image\transportasi\lion_air.jpg" />
+    <Content Include="Content\image\transportasi\mira.jpg" />
+    <Content Include="Content\image\transportasi\o1.jpg" />
+    <Content Include="Content\image\transportasi\pelindo.jpg" />
+    <Content Include="Content\image\transportasi\pusaka.jpg" />
+    <Content Include="Content\image\transportasi\sriwijaya_air.jpg" />
     <Content Include="Content\image\wisata\01.jpg" />
     <Content Include="Content\image\wisata\balai_kota_surabaya.jpg" />
     <Content Include="Content\image\wisata\Balai_pemuda.jpg" />
@@ -525,6 +542,8 @@
     <Content Include="Views\Hotel\kategori.cshtml" />
     <Content Include="Views\RumahMakan\kategori.cshtml" />
     <Content Include="Views\RumahMakan\detail.cshtml" />
+    <Content Include="Views\Transportasi\kategori.cshtml" />
+    <Content Include="Views\Transportasi\detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
