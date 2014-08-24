@@ -4,10 +4,23 @@
 
 <div class="row-page" style="background-color: snow; min-width: 750px">
     <h2>
-        ACARA!!!!!!
-    </h2>
-    <div class="box-acara" style="margin-left:auto; margin-right:auto;width:600px; height:75px;">
-        <div style="width:75px;float:left; margin-left:50px;">
+        @ViewBag.judul        
+    </h2>   
+    <div class="box-acara" style="margin-left:auto; margin-right:auto;width:800px;">
+        @foreach (var data in @ViewBag.daftarBulan)
+        {
+            <div style="width:200px;height:25px;float:left">
+                <div style="width:190px;height:20px;margin-left:5px;background-color:aqua">
+                    <a href="/acara/kategori/@data">
+                        <p style="text-align:center">
+                            @data
+                        </p>                        
+                    </a>
+                </div>
+            </div>
+        }        
+    
+        @*<div style="width:75px;float:left; margin-left:50px;">
             <h3>Bulan</h3>
         </div>
         <select style="width: 150px; margin-left: auto; margin-right: auto; margin-top:22px;float:left" id="tes">
@@ -24,13 +37,13 @@
             {
                 <option>@data</option>
             }            
-        </select>
+        </select>*@
     </div>        
-    <div class="box-acara" style="margin-left:auto; margin-right:auto;width:600px;">
+    @*<div class="box-acara" style="margin-left:auto; margin-right:auto;width:600px;">
         <div style="width: 125px; height: 50px; background-color: blue; margin-left: auto; margin-right: auto; padding-top:12px">
             <h3 style="text-align:center;color:white; margin-top:0px;">
                 cari
             </h3>
         </div>
-    </div>
+    </div>*@
 </div>

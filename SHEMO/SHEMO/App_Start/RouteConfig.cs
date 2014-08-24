@@ -50,6 +50,12 @@ namespace SHEMO
             );
 
             routes.MapRoute(
+                "list menu rumah makan",
+                "rumahmakan/detail/{ID}/menu",
+                new { controller = "rumahmakan", action = "menu" }
+            );
+
+            routes.MapRoute(
                 "detail transportasi",
                 "transportasi/detail/{ID}",
                 new { controller = "transportasi", action = "detail" }
@@ -59,6 +65,18 @@ namespace SHEMO
                 "kategori transportasi",
                 "transportasi/kategori/{jenisKategori}",
                 new { controller = "transportasi", action = "kategori" }
+            );
+
+            routes.MapRoute(
+                "detail acara",
+                "acara/detail/{ID}",
+                new { controller = "acara", action = "detail" }
+            );
+
+            routes.MapRoute(
+                "kategori acara",
+                "acara/kategori/{jenisKategori}",
+                new { controller = "acara", action = "kategori" }
             );
 
             routes.MapRoute(

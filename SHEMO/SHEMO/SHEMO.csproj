@@ -305,6 +305,12 @@
     <Content Include="Content\image\hotel\tanjung.jpg" />
     <Content Include="Content\image\hotel\tunjungan.jpg" />
     <Content Include="Content\image\hotel\weta_internasional.jpg" />
+    <Content Include="Content\image\monthevent\arch_project_2014.jpg" />
+    <Content Include="Content\image\monthevent\gif_2014.jpg" />
+    <Content Include="Content\image\monthevent\indonesia_photobook.jpg" />
+    <Content Include="Content\image\monthevent\paradesia_3.jpg" />
+    <Content Include="Content\image\monthevent\smamda_fest_2014.jpg" />
+    <Content Include="Content\image\monthevent\thai_fest_2014.jpg" />
     <Content Include="Content\image\rumahmakan\ayam_mbok_berek.jpg" />
     <Content Include="Content\image\rumahmakan\ayam_primarasa.jpg" />
     <Content Include="Content\image\rumahmakan\bebek_dkwek.jpg" />
@@ -544,6 +550,9 @@
     <Content Include="Views\RumahMakan\detail.cshtml" />
     <Content Include="Views\Transportasi\kategori.cshtml" />
     <Content Include="Views\Transportasi\detail.cshtml" />
+    <Content Include="Views\Acara\kategori.cshtml" />
+    <Content Include="Views\Acara\detail.cshtml" />
+    <Content Include="Views\RumahMakan\menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

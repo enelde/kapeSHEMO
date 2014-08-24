@@ -14,15 +14,15 @@
     <div style="margin-left:10px;margin-right:10px;">
         <table class="table" style="border-width:4px">
             <tr style="background-color:lightblue">
-                @*<th>
+                <th>
                     @Html.DisplayNameFor(model => model.ID_WISATA)
-                </th>*@
-                <th style="background-color:white;">
+                </th>
+                @*<th style="background-color:white;">
                     @Html.DisplayNameFor(model => model.ID_TOP_WISATA)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.ID_KATEGORI_WISATA)
-                </th>
+                </th>*@
                 <th style="background-color:white;">
                     @Html.DisplayNameFor(model => model.NAMA_WISATA)
                 </th>
@@ -49,15 +49,15 @@
                 if (@item.ID_WISATA % 2 == 0)
                 {
                     <tr style="background-color:white">
-                        @*<td>
-                                @Html.DisplayFor(modelItem => item.ID_WISATA)
-                            </td>*@
                         <td>
+                                @Html.DisplayFor(modelItem => item.ID_WISATA)
+                            </td>
+                        @*<td>
                             @Html.DisplayFor(modelItem => item.ID_TOP_WISATA)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.ID_KATEGORI_WISATA)
-                        </td>
+                        </td>*@
                         <td>
                             @Html.DisplayFor(modelItem => item.NAMA_WISATA)
                         </td>
@@ -86,15 +86,15 @@
                 else
                 {
                     <tr style="background-color:lightblue">
-                        @*<td>
-                                @Html.DisplayFor(modelItem => item.ID_WISATA)
-                            </td>*@
                         <td>
+                                @Html.DisplayFor(modelItem => item.ID_WISATA)
+                            </td>
+                        @*<td>
                             @Html.DisplayFor(modelItem => item.ID_TOP_WISATA)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.ID_KATEGORI_WISATA)
-                        </td>
+                        </td>*@
                         <td>
                             @Html.DisplayFor(modelItem => item.NAMA_WISATA)
                         </td>

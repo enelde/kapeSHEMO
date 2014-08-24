@@ -1,0 +1,39 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row-page" style="background-color: snow; min-width:1200px">
+    <h2 style="text-align:center">
+        RUMAH MAKAN
+    </h2>
+    <h3 style="text-align:center">
+        @ViewBag.judul
+    </h3>
+    <div class="mediabox-1">
+        <div style="width:30%; height:10px; float:left">
+
+        </div>
+        <div style="width:25%; float:left">
+            <div style="height:30px">
+                List Makanan
+            </div>            
+            @foreach(var data in @ViewBag.listMakanan)
+            {
+                <div style="height:20px;">
+                    @data
+                </div>
+            }
+        </div>
+        <div style="width:25%;float:left">
+            <div style="height:30px">
+                List Minuman
+            </div>
+            @foreach (var data in @ViewBag.listMinuman)
+            {
+                <div style="height:20px;">
+                    @data
+                </div>
+            }
+        </div>
+    </div>
+</div>

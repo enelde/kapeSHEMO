@@ -2,7 +2,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
 <div class="row-page">
     <div style="width:100%;height:30px;">
         <h2>
@@ -16,16 +15,17 @@
     </div>
     <div style="width:100%;">
         <div style="width:70%; margin-left:auto;margin-right:auto">
-            <p>
-                @ViewBag.alamat
-            </p>
-            <p>
+            <p>                               
                 @ViewBag.telepon
             </p>
             <p>
-                <a href="@ViewBag.link">
-                    List Menu Makanan dan Minuman
-                </a>
+                @ViewBag.tanggalMulai
+            </p>
+            <p>
+                @ViewBag.tanggalBerakhir
+            </p>
+            <p>
+                @ViewBag.lokasi
             </p>
         </div>
     </div>

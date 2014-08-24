@@ -59,6 +59,76 @@ namespace SHEMO.Controllers
             return results;
         }
 
+        public ActionResult menu(string ID)
+        {
+            IEnumerable<RUMAH_MAKAN> rumahMakan = GetAllDataRumahMakan();
+            IEnumerable<MAKANAN> makanan = GetAllDataMakanan();
+            IEnumerable<MINUMAN> minuman = GetAllDataMinuman();
+            IEnumerable<RM___MAKANAN> rmMakanan = GetAllDataRMMakanan();
+            IEnumerable<RM___MINUMAN> rmMinuman = GetAllDataRMMinuman();
+            if(ID!=null)
+            {
+                int intId = int.Parse(ID);
+                foreach(var data in rumahMakan)
+                {
+                    if(intId == data.ID_RUMAH_MAKAN)
+                    {
+                        ViewBag.judul = data.NAMA_RUMAH_MAKAN;
+                        break;
+                    }
+                }
+                List<int> listMakanan = new List<int>();
+                List<int> listMinuman = new List<int>();
+
+                foreach(var data in rmMakanan)
+                {
+                    if(data.ID_RUMAH_MAKAN==intId)
+                    {
+                        listMakanan.Add(data.ID_MAKANAN);
+                    }
+                }
+
+                foreach (var data in rmMinuman)
+                {
+                    if (data.ID_RUMAH_MAKAN == intId)
+                    {
+                        listMinuman.Add(data.ID_MINUMAN);
+                    }
+                }
+
+                List<string> makananList = new List<string>();
+                List<string> minumanList = new List<string>();
+
+                foreach(var data in listMakanan)
+                {
+                    foreach(var dataMakanan in makanan)
+                    {
+                        if(dataMakanan.ID_MAKANAN==data)
+                        {
+                            makananList.Add(dataMakanan.NAMA_MAKANAN);
+                            break;
+                        }
+                    }
+                }
+                ViewBag.listMakanan = makananList;
+
+                foreach (var data in listMinuman)
+                {
+                    foreach (var dataMinuman in minuman)
+                    {
+                        if (dataMinuman.ID_MINUMAN == data)
+                        {
+                            minumanList.Add(dataMinuman.MINUMAN1);
+                            break;
+                        }
+                    }
+                }
+                ViewBag.listMinuman = minumanList;
+                return View();
+            }
+            return View("error");
+        }
+
         public ActionResult detail(string ID)
         {
             IEnumerable<RUMAH_MAKAN> rumahMakan = GetAllDataRumahMakan();
@@ -76,6 +146,7 @@ namespace SHEMO.Controllers
                     if (data.ID_RUMAH_MAKAN == idRumahMakan)
                     {
                         ViewBag.judul = data.NAMA_RUMAH_MAKAN;
+                        ViewBag.link = "../detail/"+idRumahMakan+"/menu";
 
                         foreach (var temp in rumahMakanGambar)
                         {
